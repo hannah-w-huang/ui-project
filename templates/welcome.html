@@ -1,0 +1,21 @@
+{% extends "layout.html" %} {% block content %}
+
+<script
+  type="text/javascript"
+  src="{{ url_for('static', filename = 'welcome.js') }}"
+></script>
+
+<div id="welcomeIntro">
+  <h3>Welcome!</h3>
+  <div>
+    This is your guide to museums in NYC. Click on an image below or use the
+    search bar to find museums and learn more details about the location,
+    exhibits, discounted tickets, and more.
+  </div>
+</div>
+
+<div class="container">
+  <div class="row" id="randomData"></div>
+</div>
+
+{% endblock %}

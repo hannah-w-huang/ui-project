@@ -1,0 +1,249 @@
+{
+    "1": {
+        "id": "1",
+        "title": "The Met",
+        "adult_admission": "30",
+        "student_admission": "17",
+        "fee_notes": "NY students can buy pay-what-you-wish tickets",
+        "description": "The Metropolitan Museum of Art, commonly referred to as \"The Met,\" is one of the world\"s largest and most prestigious art museums, located in New York City. Spanning over 5,000 years of art history, The Met\"s vast collection includes works from virtually every corner of the globe, ranging from ancient civilizations to contemporary masterpieces. Visitors can explore its diverse galleries, housing renowned pieces such as Vincent van Gogh's \"Starry Night\" and the ancient Egyptian Temple of Dendur. With its rich cultural offerings and immersive exhibitions, The Met stands as a beacon of artistic excellence and cultural heritage for audiences worldwide.",
+        "website": "https://www.metmuseum.org",
+        "location": "Upper East Side",
+        "cafe": "true",
+        "image": "https://cdn.sanity.io/images/cctd4ker/production/b8a5e07c166342e1c7f6fe30b8c45d64fea69ea5-4096x2326.jpg?w=2048&q=75&fit=clip&auto=format",
+        "popular_exhibits": [
+            "Women Dressing Women",
+            "Lineages: Korean Art at the Met"
+        ],
+        "art_types": [
+            "European Paintings",
+            "Asian Art",
+            "European Sculpture",
+            "Islamic Art",
+            "Musical Instruments",
+            "Modern Art",
+            "Greek Art",
+            "American Art",
+            "Photography"
+        ]
+    },
+    "2": {
+        "id": "2",
+        "title": "Whitney Museum of American Art",
+        "adult_admission": "30",
+        "student_admission": "24",
+        "fee_notes": "Fridays 5-10pm are free admission",
+        "description": "The Whitney Museum of American Art, situated in the vibrant neighborhood of Manhattan's Meatpacking District in New York City, is renowned for its dedication to showcasing contemporary and modern American art. Founded in 1931 by Gertrude Vanderbilt Whitney, the museum boasts a comprehensive collection featuring works by prominent artists such as Edward Hopper, Georgia O'Keeffe, and Andy Warhol. With its striking architectural design by Renzo Piano, the museum provides a dynamic space for visitors to engage with a diverse range of artistic expressions, including paintings, sculptures, photography, and multimedia installations. Through its innovative exhibitions and educational programs, the Whitney Museum continues to be a vital hub for exploring the ever-evolving landscape of American creativity.",
+        "website": "https://whitney.org/",
+        "location": "Meatpacking District",
+        "cafe": "true",
+        "image": "https://whitneymedia.org/assets/image/827430/large_large_658.049c.jpg",
+        "popular_exhibits": [
+            "Harold Cohen",
+            "The Whitney's Collection"
+        ],
+        "art_types": [
+            "American Art",
+            "Performance Art",
+            "Photography"
+        ]
+    },
+    "3": {
+        "id": "3",
+        "title": "The Frick Collection",
+        "description": "The Frick Collection, nestled in a stately mansion on Manhattan's Upper East Side in New York City, offers a refined and intimate setting to explore European art from the Renaissance through the late 19th century. Originally the private residence of industrialist Henry Clay Frick, the museum now houses a remarkable assembly of masterpieces, including works by Vermeer, Rembrandt, Goya, and Titian, among others. Visitors can wander through beautifully curated galleries adorned with exquisite furnishings, sculptures, and decorative arts, immersing themselves in the ambiance of a bygone era. With its tranquil atmosphere and unparalleled collection, the Frick Museum provides a rare opportunity to experience the splendor of European art in an unparalleled setting.",
+        "website": "https://www.frick.org/",
+        "location": "Upper East Side",
+        "student_admission": "10",
+        "adult_admission": "20",
+        "image": "https://cdn-us-ec.yottaa.net/5098039f4707e64aa6001dc0/www.frick.org/v~4b.22f/sites/default/files/styles/max-wh_large/public/card/2023/SpecialExhibitions_N-cropped-1000-667.jpg?itok=wZcINUlW&yocs=a_",
+        "fee_notes": "Pay-what-you-wish admission on Thursdays 4-6pm",
+        "popular_exhibits": [
+            "Nicolas Party and Rosalba Carriera"
+        ],
+        "art_types": [
+            "European Paintings",
+            "European Sculpture",
+            "Decorative Art"
+        ]
+    },
+    "4": {
+        "id": "4",
+        "title": "MoMA",
+        "adult_admission": "28",
+        "student_admission": "15",
+        "fee_notes": "Columbia students get one free admission and free admission for New York City residents on the first Friday of every month, from 4-8 pm.",
+        "description": "The Museum of Modern Art (MoMA), located in the heart of Midtown Manhattan in New York City, is a global beacon for modern and contemporary art. Boasting a vast and diverse collection, MoMA showcases iconic works by pioneering artists such as Picasso, Van Gogh, Warhol, and Pollock. With its innovative exhibitions and dynamic programming, the museum continually pushes boundaries and redefines the artistic landscape for audiences worldwide. Renowned for its striking architecture and commitment to fostering creativity and discourse, MoMA stands as a vital institution at the forefront of artistic innovation and cultural exploration.",
+        "website": "https://www.moma.org/",
+        "location": "Midtown",
+        "cafe": "true",
+        "image": "https://www.moma.org/assets/visit/entrance-image--museum-d181d369c82b1029e92b2c378023683d.jpg",
+        "popular_exhibits": [
+            "Carolina Caycedo: Spiral for Shared Dreams",
+            "Leslie Thornton's HANDMADE"
+        ],
+        "art_types": [
+            "Modern Art",
+            "Contemporary Art",
+            "Photography"
+        ]
+    },
+    "5": {
+        "id": "5",
+        "title": "The Noguchi Museum",
+        "description": "Located in Long Island City, New York, the Noguchi Museum celebrates the life and work of Isamu Noguchi, one of the 20th century's most influential sculptors and designers. Housed in a serene and airy space designed by Noguchi himself, the museum showcases a comprehensive collection of his sculptures, drawings, and designs, highlighting his mastery of form, material, and space. Visitors can explore both indoor galleries and an enchanting outdoor sculpture garden, experiencing the harmony between Noguchi's art and the natural surroundings. With its tranquil atmosphere and immersive exhibitions, the Noguchi Museum offers a unique opportunity to delve into the creative legacy of this visionary artist.",
+        "website": "https://www.noguchi.org/",
+        "location": "Long Island City",
+        "student_admission": "6",
+        "adult_admission": "16",
+        "image": "https://media.cntraveler.com/photos/5d8136417ffc50000818cbac/16:9/w_2240,c_limit/00-2019-1-The-Noguchi-Museum-New-York-Area-7--photo-Nicholas-Knight.jpg",
+        "fee_notes": "Columbia students get free admission",
+        "popular_exhibits": [
+            "Toshiko Takazu: Worlds Within"
+        ],
+        "art_types": [
+            "Sculpture"
+        ]
+    },
+    "6": {
+        "id": "6",
+        "title": "Museum of Ice Cream",
+        "adult_admission": "33",
+        "student_admission": "33",
+        "fee_notes": "Weekday tickets are discounted to $25",
+        "description": "The Museum of Ice Cream is a whimsical and interactive pop-up museum that celebrates the joy of ice cream and sweet treats. Originally founded in New York City, it has since expanded to various cities around the world, captivating visitors with its colorful and Instagram-worthy exhibits. Guests can indulge their senses as they explore imaginative installations, such as a sprinkle pool, giant ice cream sculptures, and themed rooms inspired by different ice cream flavors. With its playful atmosphere and delicious experiences, the Museum of Ice Cream offers a delightful escape into a world of confectionery delight.",
+        "website": "https://www.museumoficecream.com/new-york-city/",
+        "location": "SoHo",
+        "cafe": "true",
+        "image": "https://cdn.getyourguide.com/img/tour/5e5ff97bf0e31.jpeg/145.jpg",
+        "popular_exhibits": [
+            ""
+        ],
+        "art_types": [
+            "Interactive Installations",
+            "Edible Treats"
+        ]
+    },
+    "7": {
+        "id": "7",
+        "title": "The Met Cloisters",
+        "description": "The Met Cloisters is a unique branch of the Metropolitan Museum of Art located in Upper Manhattan, New York City. Nestled within Fort Tryon Park, this museum transports visitors to medieval Europe with its collection of art, architecture, and gardens. The Cloisters' architectural design incorporates elements from several European medieval abbeys, creating an immersive experience reminiscent of a medieval monastery. Visitors can explore its galleries filled with exquisite medieval artworks, including illuminated manuscripts, sculptures, and decorative objects, while also enjoying the peaceful ambiance of its serene gardens overlooking the Hudson River.",
+        "website": "https://www.metmuseum.org/visit/plan-your-visit/met-cloisters",
+        "location": "Fort Tryon Park",
+        "student_admission": "17",
+        "adult_admission": "30",
+        "image": "https://cdn.sanity.io/images/cctd4ker/production/362dd4f65145fe84efebf96ba66de7d5db6f8b7f-4096x2326.jpg?w=2048&q=75&fit=clip&auto=format",
+        "fee_notes": "NY students can buy pay-what-you-wish tickets",
+        "popular_exhibits": [
+            "Sculpture Garden"
+        ],
+        "art_types": [
+            "Medieval Art",
+            "Architecture"
+        ]
+    },
+    "8": {
+        "id": "8",
+        "title": "The Solomon R. Guggenheim Museum",
+        "adult_admission": "30",
+        "student_admission": "19",
+        "fee_notes": "Pay-what-you-wish admission on Saturdays 5-8pm",
+        "description": "The Solomon R. Guggenheim Museum, located on the Upper East Side of Manhattan in New York City, is renowned for its iconic cylindrical building designed by architect Frank Lloyd Wright. The museum houses a vast collection of modern and contemporary art, including works by artists such as Picasso, Kandinsky, and Calder. Its unique spiraling interior layout allows visitors to experience art in a continuous flow as they ascend through the museum's galleries. Beyond its impressive collection, the Guggenheim Museum stands as a symbol of architectural innovation and a must-visit destination for art lovers worldwide.",
+        "website": "https://www.guggenheim.org/",
+        "location": "Upper East Side",
+        "cafe": "false",
+        "image": "https://www.guggenheim.org/wp-content/uploads/2017/11/installation-countryside-the-future-srgm-2020.jpg",
+        "popular_exhibits": [
+            "Going Dark: The Contemporary Figure at the Edge of Visibility",
+            "Thannhauser Collection"
+        ],
+        "art_types": [
+            "Modern Art",
+            "Contemporary Art",
+            "Architecture"
+        ]
+    },
+    "9": {
+        "id": "9",
+        "title": "Brooklyn Museum",
+        "adult_admission": "20",
+        "student_admission": "14",
+        "fee_notes": "Free admission if you are under the age of 20",
+        "description": "The Brooklyn Museum, located in the heart of Brooklyn's cultural district, is one of the oldest and largest art museums in the United States. Its extensive collection spans various cultures and time periods, with highlights including ancient Egyptian artifacts, American art, and contemporary works. The museum is renowned for its commitment to diversity and inclusion, hosting exhibitions that celebrate marginalized voices and underrepresented artists. With its dynamic programming, engaging exhibitions, and community-focused initiatives, the Brooklyn Museum serves as a vibrant hub for artistic exploration and cultural exchange in New York City.",
+        "website": "https://www.brooklynmuseum.org/",
+        "location": "Prospect Heights",
+        "cafe": "true",
+        "image": "https://d1lfxha3ugu3d4.cloudfront.net/about/images/About_Brooklyn_Museum_2004_14_van_Soest_1440x360.jpg",
+        "popular_exhibits": [
+            "Giants: Art from the Dean Collection of Swizz Beatz and Alicia Keys",
+            "Artland: An Installation by Do Ho Suh and Children"
+        ],
+        "art_types": [
+            "Assyrian Art",
+            "Egyptian Art",
+            "Asian Art",
+            "Islamic Art",
+            "American Art",
+            "Contemporary Art"
+        ]
+    },
+    "10": {
+        "id": "10",
+        "title": "Rubin Museum of Art",
+        "adult_admission": "19",
+        "student_admission": "14",
+        "fee_notes": "Free admission Friday 6-10pm",
+        "description": "The Rubin Museum of Art, located in the Chelsea neighborhood of Manhattan, is dedicated to the art and culture of the Himalayas, India, and neighboring regions. It houses a remarkable collection of Himalayan art, including exquisite thangka paintings, sculptures, and ritual objects spanning over 1,500 years. Visitors can explore the museum's serene galleries, which showcase both traditional and contemporary artworks, as well as immersive exhibitions that delve into themes of spirituality, philosophy, and the human experience. With its rich cultural offerings and engaging programming, the Rubin Museum of Art offers a unique opportunity to discover the artistic heritage of the Himalayan region.",
+        "website": "https://rubinmuseum.org/",
+        "location": "Chelsea",
+        "cafe": "true",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/The_Rubin_Museum_of_Art_%2849051574333%29.jpg/1920px-The_Rubin_Museum_of_Art_%2849051574333%29.jpg",
+        "popular_exhibits": [
+            "Gateway to Himalayan Art",
+            "Mandala Lab",
+            "Masterworks: A Journey Through Himalayan Art"
+        ],
+        "art_types": [
+            "Himalayan Art",
+            "Asian Art",
+            "Hindu Art",
+            "Religious Art",
+            "Sculpture"
+        ]
+    },
+    "11": {
+        "id": 11,
+        "title": "Cat Museum",
+        "description": "Cats are cute",
+        "website": "https://www.google.com/search?q=cat+image+instagram&tbm=isch&ved=2ahUKEwi8wK3r0eOEAxUkDWIAHbd7CCEQ2-cCegQIABAA&oq=cat+image+instagram&gs_lp=EgNpbWciE2NhdCBpbWFnZSBpbnN0YWdyYW1IzAxQowJYvgtwAHgAkAEAmAFGoAH1BKoBAjExuAEDyAEA-AEBigILZ3dzLXdpei1pbWfCAgQQIxgnwgIKEAAYgAQYigUYQ8ICBRAAGIAEwgIGEAAYCBgewgIHEAAYgAQYGIgGAQ&sclient=img&ei=nHrqZbyCMqSaiLMPt_ehiAI&bih=942&biw=1487#imgrc=n9b0_aHsh65MaM",
+        "location": "Meowtown",
+        "student_admission": "0",
+        "adult_admission": "10",
+        "image": "https://www.petspyjamas.com/uploads/2017/07/1lilbub-690x690.jpg",
+        "fee_notes": "free for students",
+        "popular_exhibits": [
+            "Kittens",
+            "Cat toys"
+        ],
+        "art_types": [
+            "Photography"
+        ]
+    },
+    "12": {
+        "id": 12,
+        "title": "Kittens!",
+        "description": "Kittens are cute!!",
+        "website": "https://www.google.com/search?q=kittens&tbm=isch&ved=2ahUKEwiQr6LfnuWEAxU7FGIAHQTuBHgQ2-cCegQIABAA&oq=kittens&gs_lp=EgNpbWciB2tpdHRlbnMyBBAjGCcyCBAAGIAEGLEDMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgARIvBBQwQlYoA9wAHgAkAEAmAFHoAGmAqoBATW4AQPIAQD4AQGKAgtnd3Mtd2l6LWltZ8ICBhAAGAUYHogGAQ&sclient=img&ei=eFHrZZCTLbuoiLMPhNyTwAc&bih=942&biw=1487#imgrc=wYTWN-8rndJkSM",
+        "location": "Upper West Side",
+        "student_admission": "0",
+        "adult_admission": "10",
+        "image": "https://www.thesprucepets.com/thmb/gbdfoyMRJcDrFgDiizqUYFLbro4=/2198x0/filters:no_upscale():strip_icc()/reasons-to-socialize-kittens-553890-hero-c8a1a9bcf2cf47cf921d64d2cb840202.jpg",
+        "fee_notes": "students get to go for free!",
+        "popular_exhibits": [
+            "Kittens",
+            "Cat toys"
+        ],
+        "art_types": [
+            "photography"
+        ]
+    }
+}

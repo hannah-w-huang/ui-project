@@ -1,0 +1,66 @@
+{% extends "layout.html" %} {% block content %}
+
+<script
+  type="text/javascript"
+  src="{{ url_for('static', filename = 'add.js') }}"
+></script>
+
+<div class="row">
+  <h3 class="col-md-6">Add Data</h3>
+  <div class="col-md-6" id="success">
+    <span>New entry successfully added!</span>
+    <a href="#" id="linkToSomethingElse" class="btn btn-secondary">View here</a>
+  </div>
+</div>
+<br />
+
+<form id="dataForm">
+  <div class="form-group">
+    <label for="title">Museum name:</label>
+    <input type="text" id="title" name="title" />
+    <small class="form-text text-danger" id="titleError"></small>
+
+    <label for="image">Image link:</label>
+    <input type="text" id="image" name="image" />
+    <small class="form-text text-danger" id="imageError"></small>
+
+    <label for="location">Location:</label>
+    <input type="text" id="location" name="location" />
+    <small class="form-text text-danger" id="locationError"></small>
+  </div>
+
+  <div class="form-group">
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" rows="4" cols="50"></textarea>
+    <small class="form-text text-danger" id="descriptionError"></small>
+  </div>
+
+  <div class="form-group">
+    <label for="student">Student ticket price:</label>
+    <input type="text" id="student" name="student" />
+    <small class="form-text text-danger" id="studentError"></small>
+    <label for="adult">Adult ticket price:</label>
+    <input type="text" id="adult" name="adult" />
+    <small class="form-text text-danger" id="adultError"></small>
+    <label for="ticket">Ticket price notes:</label>
+    <input type="text" id="ticket" name="ticket" />
+    <small class="form-text text-danger" id="ticketError"></small>
+  </div>
+
+  <div class="form-group">
+    <label for="website">Website:</label>
+    <input type="text" id="website" name="website" />
+    <small class="form-text text-danger" id="websiteError"></small>
+    <label for="exhibit">Popular exhibits:</label>
+    <input type="text" id="exhibit" name="exhibit" />
+    <small class="form-text text-danger" id="exhibitError"></small>
+    <label for="types">Types of art:</label>
+    <input type="text" id="types" name="types" />
+    <small class="form-text text-danger" id="typesError"></small>
+  </div>
+
+  <div>
+    <input type="submit" value="Submit" />
+  </div>
+</form>
+{% endblock %}
