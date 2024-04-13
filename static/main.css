@@ -1,43 +1,4 @@
-.img-container {
-  max-height: 500px;
-  max-width: 600px;
-}
-
-#welcomeIntro {
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-
-#museumIcon {
-  height: 30px;
-  padding: 5px;
-  vertical-align: bottom;
-}
-
 nav {
-  background-color: rgb(220, 237, 169);
+  background-color: lightgray;
   margin-bottom: 20px;
-}
-
-.secondaryColor {
-  color: rgba(128, 128, 128, 0.566);
-}
-
-.location {
-  vertical-align: middle;
-}
-
-.highlight {
-  background-color: yellow;
-  font-weight: bold;
-}
-
-#success {
-  display: none;
-}
-
-textarea.form-control {
-  height: auto; /* Let the height adjust based on content */
-  min-height: 200px; /* Set a minimum height */
-  width: 100%; /* Make it span the entire width of its container */
 }
