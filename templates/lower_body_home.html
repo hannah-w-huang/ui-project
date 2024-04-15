@@ -1,0 +1,72 @@
+{% extends "layout.html" %} {% block content %}
+
+<script
+  type="text/javascript"
+  src="{{ url_for('static', filename = 'lower_body_home.js') }}"
+></script>
+
+<div class="container">
+  <div class="row format-row">
+      <div class="col-6 motion-text">
+        Bend
+      </div>
+      <div class="col-6 motion-text">
+        Extend
+      </div>
+  </div>
+  <div class="row format-row">
+    <div class="col-6">
+      <div class="description-text">
+        A bending/flexing motion at the knee signifies use of the hamstring muscles.
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="description-text">
+        An extending/straightening motion at the knee signifies use of the quadricep muscles.
+      </div>
+    </div>
+  </div>
+  <div class="row format-row">
+    <div class="col-6">
+      <div class="row">
+          <div class="col-12 align-image">
+            <img src="https://veritas.widen.net/content/v8jghhql2t/webp/hamstrings.webp?use=idsla&color=&retina=true&u=at8tiu&w=780&h=449&crop=yes&k=c" class="img-fluid format-image" alt="Image of Hamstring Muscles">
+          </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="row">
+          <div class="col-12 align-image">
+            <img src="https://www.oldschoollabs.com/wp-content/uploads/2020/05/Why-You-Should-Be-Training-Your-Quads.jpg" class="img-fluid format-image" alt="Image of Quadricep Muscles">
+          </div>
+      </div>
+    </div>
+  </div> 
+  <div class="row format-row">
+    <div class="col-6">
+      <div class="row">
+        <div class="col-12">
+            <div class="align-image-text">
+                hamstrings
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="row">
+        <div class="col-12">
+            <div class="align-image-text">
+                quadriceps
+            </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+  <div class="row format-row">
+    <div class="col-12 align-button">
+        <button type="button" class="btn btn-primary" id="start_lower_btn">Start Learning</button>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
