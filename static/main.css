@@ -2,3 +2,31 @@ nav {
   background-color: lightgray;
   margin-bottom: 20px;
 }
+
+.center {
+  text-align: center;
+}
+
+.header { 
+  font-size: 20px;
+}
+
+#start-quiz-button {
+  background-color: lightgreen;
+}
+
+.question-num {
+  font-weight: bold;
+}
+
+.quiz-question {
+  color: grey;
+}
+
+.correct {
+  background-color: lightgreen;
+}
+
+.incorrect {
+  background-color: tomato;
+}
