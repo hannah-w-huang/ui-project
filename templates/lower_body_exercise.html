@@ -1,0 +1,41 @@
+{% extends "layout.html" %} {% block content %}
+
+<script
+  type="text/javascript"
+  src="{{ url_for('static', filename = 'lower_body_exercise.js') }}"
+></script>
+
+<div class="container">
+    <div class="row">
+        <div class="col-4 center-exercise-info">
+            <div class="format-text">
+                <span class="exercise-info">Exercise: </span><span id="exercise_name"></span>
+            </div>
+            <div class="format-text">
+                <span class="exercise-info">Motion: </span><span id="exercise_motion"></span>
+            </div>
+            <div class="format-text">
+                <span class="exercise-info">Muscles Worked: </span><span id="exercise_muscles"></span>
+            </div>
+        </div>
+        <div class="col-4 center-video">
+            <video id="exercise_video" controls>
+                <source src="" alt="Video of exercise">
+            </video>
+        </div>
+        <div class="col-4 center-image">
+            <img id="exercise_image" src="" alt="Image of muscle">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-2 format-button">
+            <button type="button" class="btn btn-primary" id="prev_button">Previous Exercise</button>
+        </div>
+        <div class="col-8"></div>
+        <div class="col-2 format-button">
+            <button type="button" class="btn btn-primary" id="next_or_home_button"></button>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
