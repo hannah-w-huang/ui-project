@@ -82,4 +82,52 @@ nav {
 
 .incorrect {
   background-color: tomato;
+}
 
+.center-exercise-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.format-text{
+  margin-top: 10px;
+}
+
+.exercise-info{
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#exercise_name{
+  font-size: 25px;
+}
+
+#exercise_motion{
+  font-size: 25px;
+}
+
+#exercise_muscles{
+  font-size: 25px;
+}
+
+.center-video{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.center-image{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.format-button{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
