@@ -1,6 +1,59 @@
 nav {
-  background-color: lightgray;
+  background-color: darkgray;
   margin-bottom: 20px;
+}
+
+.nav-text{
+  margin: 10px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.format-top-link{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.motion-text{
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.description-text{
+  text-align: center;
+  font-size: 20px;
+}
+
+.align-image-text{
+  text-align: center;
+  color: red;
+  margin-bottom: 10px;
+  margin-top: -5px;
+  font-size: 18px;
+}
+
+.align-button{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.format-row{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.align-image{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.format-image{
+  height: 280px;
+  width: auto;
 }
 
 .center {
@@ -29,4 +82,4 @@ nav {
 
 .incorrect {
   background-color: tomato;
-}
+
