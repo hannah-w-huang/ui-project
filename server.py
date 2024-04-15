@@ -10,7 +10,13 @@ app = Flask(__name__)
 with open('data.json', 'r') as file:
     data = json.load(file)
 
-# data = 
+question = {"1": {'id': "1",
+                  'question': "If you are using the assisted pull up machine with the weight set at 40 pounds and it is too easy, which weight should you try instead?",
+                  'media': [],
+                  'correct': "20 pounds",
+                  'options': ['20 pounds', '60 pounds']
+               }
+   }
 
 # ROUTES
 
@@ -37,6 +43,22 @@ def first_lower():
 @app.route('/quiz')
 def quiz_home():
    return render_template('quiz_home.html') 
+
+
+@app.route('/quiz/<id>')
+def quiz_question(id):
+   requested_q = question[str(id)]
+   print(requested_q)
+
+   return render_template('quiz_question.html', requested_q=requested_q) 
+
+'''{id: "1",
+   question: "test question?",
+   media: [could be len 0 1 or 2],
+   correct: "correct answer to question",
+   options: ['back', 'abs', 'other possible answer', 'any number of options']
+
+   }'''
 
 @app.route('/learn/<string:lesson_id>', methods=['GET', 'POST'])
 def learn(lesson_id):
