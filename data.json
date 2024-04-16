@@ -1,6 +1,7 @@
 {
   "1": {
     "id": "1",
+    "type": "upper",
     "name": "Incline Bench Press",
     "motion": "Pushing weight away from body",
     "muscles": "Pectorals (Chest)",
@@ -9,6 +10,7 @@
   },
   "2": {
     "id": "2",
+    "type": "upper",
     "name": "Shoulder Press",
     "motion": "Pushing weight away from body",
     "muscles": "Shoulders",
@@ -17,6 +19,7 @@
   },
   "3": {
     "id": "3",
+    "type": "upper",
     "name": "Lat Pulldown",
     "motion": "Pulling weight towards body",
     "muscles": "Latissimus Dorsi (Back)",
@@ -25,6 +28,7 @@
   },
   "4": {
     "id": "4",
+    "type": "upper",
     "name": "Vertical Row",
     "motion": "Pulling weight towards body",
     "muscles": "Latissimus Dorsi (Back)",
@@ -33,6 +37,7 @@
   },
   "5": {
     "id": "5",
+    "type": "lower",
     "name": "Seated Leg Curl",
     "motion": "Moving weight by bending/flexing at the knee",
     "muscles": "Hamstrings",
@@ -41,6 +46,7 @@
   },
   "6": {
     "id": "6",
+    "type": "lower",
     "name": "Falling Hamstring Curl",
     "motion": "Controlling body's fall by bending/flexing at the knee",
     "muscles": "Hamstrings",
@@ -49,6 +55,7 @@
   },
   "7": {
     "id": "7",
+    "type": "lower",
     "name": "Leg Extension",
     "motion": "Moving weight by extending at the knee",
     "muscles": "Quadriceps",
@@ -57,6 +64,7 @@
   },
   "8": {
     "id": "8",
+    "type": "lower",
     "name": "Leg Press",
     "motion": "Moving weight by extending at the knee",
     "muscles": "Quadriceps",
