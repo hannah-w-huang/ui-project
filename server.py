@@ -8,6 +8,8 @@ app = Flask(__name__)
 
 #global data
 
+NUM_EXERCISES_CONST = 4
+
 with open('data.json', 'r') as file:
     data = json.load(file)
 
@@ -54,6 +56,7 @@ def lower_body():
 @app.route('/learn_upper/<string:lesson_id>', methods=['GET', 'POST'])
 def learn_upper(lesson_id):
    global data, latest_progress_upper, learning_user_data
+
    if request.method == 'POST':
       exercise = data.get(lesson_id)
       name = exercise["name"]
@@ -68,14 +71,17 @@ def learn_upper(lesson_id):
       latest_progress_upper = max(latest_progress_upper, int(lesson_id))
       print("learning_user_data: ", learning_user_data)
       print("latest_progress_upper: ", latest_progress_upper)
+      completion = int(100*len(learning_user_data["upper"])/NUM_EXERCISES_CONST)
 
-      return jsonify({"name": name, "motion": motion, "muscles": muscles, "video": video, "image": image})
+
+      return jsonify({"name": name, "motion": motion, "muscles": muscles, "video": video, "image": image, "completion": completion})
    return render_template('upper_body_exercise.html') 
 
 
 @app.route('/learn_lower/<string:lesson_id>', methods=['GET', 'POST'])
 def learn_lower(lesson_id):
    global data, latest_progress_lower, learning_user_data
+
    if request.method == 'POST':
       exercise = data.get(lesson_id)
       name = exercise["name"]
@@ -90,8 +96,11 @@ def learn_lower(lesson_id):
       latest_progress_lower = max(latest_progress_lower, int(lesson_id))
       print("learning_user_data: ", learning_user_data)
       print("latest_progress_lower: ", latest_progress_lower)
+      completion = int(100 * len(learning_user_data["lower"])/NUM_EXERCISES_CONST)
 
-      return jsonify({"name": name, "motion": motion, "muscles": muscles, "video": video, "image": image})
+
+      return jsonify({"name": name, "motion": motion, "muscles": muscles, "video": video, "image": image,  "completion": completion})
+      
    return render_template('lower_body_exercise.html') 
 
 @app.route('/quiz', methods=['GET'])
