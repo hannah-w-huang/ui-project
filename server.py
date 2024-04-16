@@ -32,12 +32,32 @@ def upper_body():
 def lower_body():
    return render_template('lower_body_home.html') 
 
-@app.route('/first_upper')
-def first_upper():
+@app.route('/learn_upper/<string:lesson_id>', methods=['GET', 'POST'])
+def learn_upper(lesson_id):
+   global data
+   if request.method == 'POST':
+      exercise = data.get(lesson_id)
+      name = exercise["name"]
+      motion = exercise["motion"]
+      muscles = exercise["muscles"]
+      video = exercise["video"]
+      image = exercise["image"]
+
+      return jsonify({"name": name, "motion": motion, "muscles": muscles, "video": video, "image": image})
    return render_template('upper_body_exercise.html') 
 
-@app.route('/first_lower')
-def first_lower():
+@app.route('/learn_lower/<string:lesson_id>', methods=['GET', 'POST'])
+def learn_lower(lesson_id):
+   global data
+   if request.method == 'POST':
+      exercise = data.get(lesson_id)
+      name = exercise["name"]
+      motion = exercise["motion"]
+      muscles = exercise["muscles"]
+      video = exercise["video"]
+      image = exercise["image"]
+
+      return jsonify({"name": name, "motion": motion, "muscles": muscles, "video": video, "image": image})
    return render_template('lower_body_exercise.html') 
 
 @app.route('/quiz')
@@ -60,18 +80,7 @@ def quiz_question(id):
 
    }'''
 
-@app.route('/learn/<string:lesson_id>', methods=['GET', 'POST'])
-def learn(lesson_id):
-   global data
-
-   exercise = data.get(lesson_id)
-   name = exercise["name"]
-   motion = exercise["motion"]
-   muscles = exercise["muscles"]
-   video = exercise["video"]
-   image = exercise["image"]
-
-   return jsonify({"name": name, "motion": motion, "muscles": muscles, "video": video, "image": image})
+   
 
 if __name__ == '__main__':
    app.run(debug = True)
