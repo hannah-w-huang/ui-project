@@ -13,6 +13,7 @@ function display_exercise(exercise_id) {
             $('#exercise_muscles').text(data.muscles);
             $('#exercise_video').attr('src', data.video);
             $('#exercise_image').attr('src', data.image);
+            $('#completion_status_upper').text(data.completion + "% complete");
             current_exercise_id = exercise_id; 
 
             if (exercise_id > 1 && exercise_id <= 4) {
