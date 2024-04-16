@@ -16,17 +16,19 @@ with open('data.json', 'r') as file:
 question = {"1": {'id': "1",
                   'question': "If you are using the assisted pull up machine with the weight set at 40 pounds and it is too easy, which weight should you try instead?",
                   'media': [],
-                  'correct': "20 pounds",
+                  'correct': "0",
                   'options': ['20 pounds', '60 pounds']
-               },
-            "2": {'id': "2",
-               'question': "?",
-               'media': [],
-               'correct': "",
-               'options': []
+                  },
+            "2": {'id': '2',
+                  'question': "Question 2?",
+                  'media': [],
+                  'correct': "2",
+                  'options': ['optionA', 'optionB', 'optionC']
+                  }
             }
-   }
 
+# quiz progress data
+quiz_selections = {}
 user_quiz_response = {}
 user_score = 0
 
@@ -92,27 +94,31 @@ def learn_lower(lesson_id):
       return jsonify({"name": name, "motion": motion, "muscles": muscles, "video": video, "image": image})
    return render_template('lower_body_exercise.html') 
 
-@app.route('/quiz')
+@app.route('/quiz', methods=['GET'])
 def quiz_home():
    global user_quiz_response, user_score
    print(user_quiz_response,  user_score)
    return render_template('quiz_home.html') 
 
 
-@app.route('/quiz/<id>')
+@app.route('/quiz/<id>', methods=['GET'])
 def quiz_question(id):
    requested_q = question[str(id)]
-   print(requested_q)
+   # print(requested_q)
 
    return render_template('quiz_question.html', requested_q=requested_q) 
 
-'''{id: "1",
-   question: "test question?",
-   media: [could be len 0 1 or 2],
-   correct: "correct answer to question",
-   options: ['back', 'abs', 'other possible answer', 'any number of options']
-
-   }'''
+@app.route('/save_answer', methods=['POST'])
+def save_answer():
+   print('in save_answer()')
+   json_data = request.get_json()
+   data_id = json_data['id']
+   answer = json_data['answer']
+   print('data_id', data_id)
+   print('answer', answer)
+   quiz_selections[data_id] = answer
+   return quiz_selections
+   # return redirect(url_for('new_route'))
 
 
 @app.route('/save_answer/<id>', methods=['POST'])

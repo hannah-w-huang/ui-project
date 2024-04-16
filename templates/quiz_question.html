@@ -24,6 +24,8 @@
 
         $("#submit-button").click(function() {
         // Call your function here
+        console.log("REQUESTED_Q ID: "+ requested_q['id']);
+        console.log("REQUESTED_Q CORRECT: "+ requested_q['correct']);
         checkAnswers(requested_q['id'], requested_q['correct']);
         }
   );
