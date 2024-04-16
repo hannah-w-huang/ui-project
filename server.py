@@ -2,6 +2,7 @@ from flask import Flask
 from flask import render_template
 from flask import Response, request, jsonify
 import json
+from datetime import datetime
 
 app = Flask(__name__)
 
@@ -17,6 +18,10 @@ question = {"1": {'id': "1",
                   'options': ['20 pounds', '60 pounds']
                }
    }
+
+#learning data
+learning_user_data = {}
+latest_progress = 0
 
 # ROUTES
 
@@ -80,7 +85,23 @@ def quiz_question(id):
 
    }'''
 
-   
+@app.route('/learn/<string:lesson_id>', methods=['GET', 'POST'])
+def learn(lesson_id):
+   global data
+
+   exercise = data.get(lesson_id)
+   name = exercise["name"]
+   motion = exercise["motion"]
+   muscles = exercise["muscles"]
+   video = exercise["video"]
+   image = exercise["image"]
+
+   now = datetime.now()
+   current_time = now.strftime("%H:%M:%S")
+   learning_user_data[lesson_id] = current_time
+
+   return jsonify({"name": name, "motion": motion, "muscles": muscles, "video": video, "image": image})
+
 
 if __name__ == '__main__':
    app.run(debug = True)
