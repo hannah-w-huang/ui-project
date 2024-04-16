@@ -1,7 +1,9 @@
 function display_exercise(exercise_id) {
+    console.log(exercise_id);
+
     $.ajax({
         type: "POST",
-        url: "/learn/" + exercise_id.toString(),
+        url: "/learn_upper/" + exercise_id.toString(),
         dataType: "json",
         contentType: "application/json; charset=utf-8",
         data: JSON.stringify(exercise_id.toString()),
@@ -24,6 +26,9 @@ function display_exercise(exercise_id) {
             } else {
                 $('#next_or_home_button').text("Upper Body Home");
             }
+
+            history.pushState(null, null, "/learn_upper/" + exercise_id.toString());
+            localStorage.setItem('upper_body_current_exercise_id', current_exercise_id);
         },
         error: function(request, status, error) {
             console.log("Error");
@@ -34,8 +39,12 @@ function display_exercise(exercise_id) {
     });
 }
 
+function update_local_storage() {
+    localStorage.setItem('upper_body_current_exercise_id', current_exercise_id);
+}
+
 $(document).ready(function() {
-    let current_exercise_id = 1; 
+    let current_exercise_id = localStorage.getItem('upper_body_current_exercise_id') || 1;
 
     display_exercise(current_exercise_id); 
 
@@ -44,6 +53,7 @@ $(document).ready(function() {
         if (current_exercise_id < 4) {
             current_exercise_id++;
             display_exercise(current_exercise_id); 
+            update_local_storage();
         } else if (current_exercise_id === 4) {
             window.location.href = '/upper_body'; 
         }
@@ -54,6 +64,7 @@ $(document).ready(function() {
         if (current_exercise_id > 1 && current_exercise_id <= 4) {
             current_exercise_id--;
             display_exercise(current_exercise_id); 
+            update_local_storage();
         }
     });
 });
