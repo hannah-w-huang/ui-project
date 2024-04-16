@@ -62,7 +62,7 @@ function display_quiz_q(q) {
 }
 
 function checkAnswers(id, correct) {
-  let correctAnswer = correct;
+  let correctAnswerIdx = correct;
   let selectedAnswer = document.querySelector(
     'input[name="' + id + '"]:checked'
   ).value;
@@ -70,7 +70,8 @@ function checkAnswers(id, correct) {
   if (selectedAnswer) {
     let options = document.querySelectorAll('input[name="' + id + '"]');
     options.forEach(function (option) {
-      if (option.value === correctAnswer) {
+      console.log("option " + option.value);
+      if (option.value === correctAnswerIdx) {
         option.nextElementSibling.classList.add("correct");
       } else {
         option.nextElementSibling.classList.add("incorrect");
@@ -85,7 +86,7 @@ function checkAnswers(id, correct) {
     nextButton.onclick = function () {
       $.ajax({
         type: "POST",
-        url: "save_answer",
+        url: "/save_answer",
         dataType: "json",
         contentType: "application/json; charset=utf-8",
         data: JSON.stringify({ id: id, answer: selectedAnswer }),
