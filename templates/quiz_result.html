@@ -20,9 +20,10 @@
   let correct_count  = {{correct_count|tojson}};
 
   $(document).ready(function() {
+      console.log('correct_count ' + correct_count)
       display_result_text(correct_count)
       $("#home-button").click(function() {
-          window.location.href = "/home"
+          window.location.href = "/"
       })
   });
 </script>

@@ -31,8 +31,7 @@ question = {"1": {'id': "1",
 
 # quiz progress data
 quiz_selections = {}
-user_quiz_response = {}
-user_score = 0
+correct_count = 0
 
 #learning data
 learning_user_data = {"upper": {}, "lower":{}}
@@ -105,43 +104,52 @@ def learn_lower(lesson_id):
 
 @app.route('/quiz', methods=['GET'])
 def quiz_home():
-   global user_quiz_response, user_score
-   print(user_quiz_response,  user_score)
+   # global user_quiz_response, user_score
+   # print(user_quiz_response,  user_score)
    return render_template('quiz_home.html') 
 
 
 @app.route('/quiz/<id>', methods=['GET'])
 def quiz_question(id):
-   requested_q = question[str(id)]
-   # print(requested_q)
-
-   return render_template('quiz_question.html', requested_q=requested_q) 
+   global correct_count
+   if int(id) < 3: # for 2 question quiz, hardcoded 3 for now
+      requested_q = question[str(id)]
+      return render_template('quiz_question.html', requested_q=requested_q) 
+   else:
+      # correct count doesnt show up
+      return render_template('quiz_result.html', correct_count=correct_count) 
 
 @app.route('/save_answer', methods=['POST'])
 def save_answer():
-   print('in save_answer()')
+   global correct_count
+   
    json_data = request.get_json()
    data_id = json_data['id']
-   answer = json_data['answer']
-   print('data_id', data_id)
-   print('answer', answer)
+   answer = json_data['answer'] # is the index of the chosen answer, 0s indexed
+
+   if data_id == "1": # make sure that from question 1 of quiz we start at score of 0
+         correct_count = 0
+
+   if question[data_id]['correct'] == answer:
+      correct_count += 1
+
    quiz_selections[data_id] = answer
    return quiz_selections
    # return redirect(url_for('new_route'))
 
 
-@app.route('/save_answer/<id>', methods=['POST'])
-def save_quiz_answer(id):
-   global user_quiz_response, user_score
+# @app.route('/save_answer/<id>', methods=['POST'])
+# def save_quiz_answer(id):
+#    global user_quiz_response, user_score
 
-   answer = request.get_json()["answer"]
-   print("answer:", answer)
-   user_quiz_response[id] = answer
+#    answer = request.get_json()["answer"]
+#    print("answer:", answer)
+#    user_quiz_response[id] = answer
 
-   if answer == question[id]["correct"]:
-      user_score += 1
-      return True
-   return False
+#    if answer == question[id]["correct"]:
+#       user_score += 1
+#       return True
+#    return False
 
 @app.route('/learn/<string:lesson_id>', methods=['GET', 'POST'])
 def learn(lesson_id):
@@ -153,6 +161,10 @@ def learn(lesson_id):
    muscles = exercise["muscles"]
    video = exercise["video"]
    image = exercise["image"]
+
+   now = datetime.now()
+   current_time = now.strftime("%H:%M:%S")
+   learning_user_data[lesson_id] = current_time
 
    return jsonify({"name": name, "motion": motion, "muscles": muscles, "video": video, "image": image})
 

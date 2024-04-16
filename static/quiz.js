@@ -107,7 +107,8 @@ function checkAnswers(id, correct) {
 }
 
 function display_result_text(c) {
-  let $result_text = $("result_text");
+  console.log("c in display_result_text()" + c);
+  let $result_text = $("#result_text");
   let $group = $("<div>").addClass("center");
   $group.append($("<div>").text("You scored " + c + " out of 2."));
   if (parseInt(c) < 2) {
@@ -117,7 +118,7 @@ function display_result_text(c) {
       )
     );
   } else {
-    $group.append($("<div>").text("Congrats!"));
+    $group.append($("<div>").text("Great job!"));
   }
   $result_text.append($group);
 }
