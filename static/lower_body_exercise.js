@@ -1,7 +1,9 @@
 function display_exercise(exercise_id) {
+    console.log(exercise_id);
+
     $.ajax({
         type: "POST",
-        url: "/learn/" + exercise_id.toString(),
+        url: "/learn_lower/" + exercise_id.toString(),
         dataType: "json",
         contentType: "application/json; charset=utf-8",
         data: JSON.stringify(exercise_id.toString()),
@@ -24,6 +26,9 @@ function display_exercise(exercise_id) {
             } else {
                 $('#next_or_home_button').text("Lower Body Home");
             }
+
+            history.pushState(null, null, "/learn_lower/" + exercise_id.toString());
+            localStorage.setItem('lower_body_current_exercise_id', current_exercise_id);
         },
         error: function(request, status, error) {
             console.log("Error");
@@ -34,8 +39,12 @@ function display_exercise(exercise_id) {
     });
 }
 
+function update_local_storage() {
+    localStorage.setItem('lower_body_current_exercise_id', current_exercise_id);
+}
+
 $(document).ready(function() {
-    let current_exercise_id = 5; 
+    let current_exercise_id = localStorage.getItem('lower_body_current_exercise_id') || 5;
 
     display_exercise(current_exercise_id); 
 
@@ -44,6 +53,7 @@ $(document).ready(function() {
         if (current_exercise_id < 8) {
             current_exercise_id++;
             display_exercise(current_exercise_id); 
+            update_local_storage();
         } else if (current_exercise_id === 8) {
             window.location.href = '/lower_body'; 
         }
@@ -54,6 +64,7 @@ $(document).ready(function() {
         if (current_exercise_id > 5 && current_exercise_id <= 8) {
             current_exercise_id--;
             display_exercise(current_exercise_id); 
+            update_local_storage();
         }
     });
 });
