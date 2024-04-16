@@ -5,9 +5,26 @@
   src="{{ url_for('static', filename = 'welcome.js') }}"
 ></script>
 
-<div id="welcomeIntro">
-  <h3>Welcome!</h3>
-  <div>Gym guide!</div>
+<div class = "container">
+  <div id="welcomeIntro">
+    <h3>Welcome!</h3>
+    <div>Gym guide!</div>
+
+    <div class = "row">
+      <div class="col-2 format-button">
+        <button type="button" class="btn btn-primary" id="home_to_upper">Upper Body</button>
+      </div>
+
+      <div class="col-2 format-button">
+        <button type="button" class="btn btn-primary" id="home_to_lower">Lower Body</button>
+      </div>
+
+      <div class="col-2 format-button">
+        <button type="button" class="btn btn-primary" id="home_to_quiz">Take Quiz</button>
+      </div>
+
+    </div>
+  </div> 
 </div>
 
 {% endblock %}
