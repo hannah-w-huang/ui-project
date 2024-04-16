@@ -1,21 +1,36 @@
-{% extends "layout.html" %}
+{% extends "layout.html" %} {% block content %}
 
-{% block content %}
+<script
+  type="text/javascript"
+  src="{{ url_for('static', filename = 'quiz.js') }}"
+></script>
+<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+<link
+  rel="stylesheet"
+  href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+/>
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  crossorigin="anonymous"
+/>
 
-    <script type="text/javascript" src="{{ url_for('static', filename = '.js') }}"></script>
-    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+<script>
+    let requested_q  = {{requested_q|tojson}};
+    console.log(requested_q)
+    $(document).ready(function() {
+        display_quiz_q(requested_q)
 
-    <script>
-        let requested_q  = {{requested_q|tojson}};
+        $("#submit-button").click(function() {
+        // Call your function here
+        checkAnswers(requested_q['id'], requested_q['correct']);
+        }
+  );
 
-        $(document).ready(function() {
-            display_quiz_q(requested_q)
-        });
-    </script>
+    });
+</script>
 
-    <div id="q_details"></div>
+<div id="q_details"></div>
 
 {% endblock %}
