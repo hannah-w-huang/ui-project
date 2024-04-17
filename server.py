@@ -100,9 +100,9 @@ def quiz_question(id):
    global correct_count
    if int(id) < (len(question) + 1): # for a 2 question quiz, less than 3
       requested_q = question[str(id)]
-      return render_template('quiz_question.html', requested_q=requested_q) 
+      return render_template('quiz_question.html', requested_q=requested_q, q_count=len(question)) 
    else:
-      return render_template('quiz_result.html', correct_count=correct_count) 
+      return render_template('quiz_result.html', correct_count=correct_count, q_count=len(question)) 
 
 @app.route('/save_answer', methods=['POST'])
 def save_answer():

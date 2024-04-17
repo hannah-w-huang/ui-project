@@ -1,17 +1,18 @@
 $(document).ready(function () {
-  display_quiz_q(requested_q);
+  display_quiz_q(requested_q, q_count);
 
   $("#submit-button").click(function () {
     checkAnswers(requested_q["id"], requested_q["correct"]);
   });
 });
 
-function display_quiz_q(q) {
+function display_quiz_q(q, q_count) {
+  console.log(q);
   let question_number = $("<div>")
     .attr("name", q["id"])
     .attr("id", "question-num")
     .addClass("header")
-    .text("Question " + q["id"] + " out of 2");
+    .text("Question " + q["id"] + " out of " + q_count);
 
   let question_content = $("<div>")
     .addClass("quiz-question")
@@ -31,12 +32,19 @@ function display_quiz_q(q) {
       id: option,
       name: q["id"],
       value: option,
+      class: "answer-option",
     });
 
     let label = $("<label>", { for: option }).text(q["options"][option]);
     form.append(newOption, label, "<br>");
   }
   quiz_options.append(form);
+
+  let answer_explanation = $("<div>")
+    .text(q["explanation"])
+    .attr("id", "explanation")
+    .hide();
+  quiz_options.append(answer_explanation);
 
   if (q["media"].length > 0) {
     $("#video-media").attr("src", q["media"][0]);
@@ -68,9 +76,12 @@ function display_quiz_q(q) {
         success: function (result) {
           let submitButton = $("#submit-button");
           let nextButton = $("#next-button");
+          let explanation = $("#explanation");
 
           submitButton.prop("disabled", true);
           nextButton.prop("disabled", false);
+          explanation.show();
+
           console.log("Answer successfully saved");
         },
         error: function (request, status, error) {
