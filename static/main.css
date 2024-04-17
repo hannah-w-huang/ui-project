@@ -135,6 +135,17 @@ nav {
   justify-content: center;
 }
 
+.quiz-home {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#button-row {
+  display: flex;
+  justify-content: space-between;
+}
+
 .center {
   display: flex;
   flex-direction: column;
