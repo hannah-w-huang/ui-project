@@ -1,49 +1,46 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
+  <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="data:,">
-    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="data:," />
+
     <!-- jquery -->
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>  
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
-  
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}" />
+
     <title>Gym Guide</title>
-    </head>
-    <body>
-    
+  </head>
+  <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-navy">
-        <div class="container">
-            <div class="col-3 format-top-link">
-              <a class="navbar-brand nav-text" href="/">Home</a>
-            </div>
-            <div class="col-3 format-top-link">
-              <a class="navbar-brand nav-text" href="/upper_body">Upper Body</a>
-            </div>
-            <div class="col-3 format-top-link">
-              <a class="navbar-brand nav-text" href="/lower_body">Lower Body</a>
-            </div>
-            <div class="col-3 format-top-link">
-              <a class="navbar-brand nav-text" href="/quiz">Quiz</a>
-            </div>
+      <div class="container">
+        <div class="col-3 format-top-link">
+          <a class="navbar-brand nav-text" href="/">Home</a>
         </div>
+        <div class="col-3 format-top-link">
+          <a class="navbar-brand nav-text" href="/upper_body">Upper Body</a>
+        </div>
+        <div class="col-3 format-top-link">
+          <a class="navbar-brand nav-text" href="/lower_body">Lower Body</a>
+        </div>
+        <div class="col-3 format-top-link">
+          <a class="navbar-brand nav-text" href="/quiz">Quiz</a>
+        </div>
+      </div>
     </nav>
 
-    <div class="container">   
-        {% block content %}
-        {% endblock %}
-    </div>
-
+    <div class="container">{% block content %} {% endblock %}</div>
   </body>
 </html>
-
-
-
-
