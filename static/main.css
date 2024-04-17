@@ -3,30 +3,30 @@ nav {
   margin-bottom: 20px;
 }
 
-.nav-text{
+.nav-text {
   margin: 10px;
   text-align: center;
   font-size: 20px;
 }
 
-.format-top-link{
+.format-top-link {
   align-items: center;
   display: flex;
   justify-content: center;
 }
 
-.motion-text{
+.motion-text {
   text-align: center;
   font-size: 30px;
   font-weight: bold;
 }
 
-.description-text{
+.description-text {
   text-align: center;
   font-size: 20px;
 }
 
-.align-image-text{
+.align-image-text {
   text-align: center;
   color: red;
   margin-bottom: 10px;
@@ -34,24 +34,24 @@ nav {
   font-size: 18px;
 }
 
-.align-button{
+.align-button {
   align-items: center;
   display: flex;
   justify-content: center;
 }
 
-.format-row{
+.format-row {
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
-.align-image{
+.align-image {
   align-items: center;
   display: flex;
   justify-content: center;
 }
 
-.format-image{
+.format-image {
   height: 280px;
   width: auto;
 }
@@ -60,7 +60,7 @@ nav {
   text-align: center;
 }
 
-.header { 
+.header {
   font-size: 20px;
 }
 
@@ -68,7 +68,7 @@ nav {
   background-color: lightgreen;
 }
 
-.question-num {
+#question-num {
   font-weight: bold;
 }
 
@@ -84,52 +84,63 @@ nav {
   background-color: tomato;
 }
 
-.center-exercise-info{
+.center-exercise-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 100%;
 }
 
-.format-text{
+.format-text {
   margin-top: 10px;
 }
 
-.exercise-info{
+.exercise-info {
   font-size: 25px;
   font-weight: bold;
 }
 
-#exercise_name{
+#exercise_name {
   font-size: 25px;
 }
 
-#exercise_motion{
+#exercise_motion {
   font-size: 25px;
 }
 
-#exercise_muscles{
+#exercise_muscles {
   font-size: 25px;
 }
 
-.center-video{
+.center-video {
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 100%;
 }
 
-.center-image{
+.center-image {
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 100%;
 }
 
-.format-button{
+.format-button {
   align-items: center;
   display: flex;
   justify-content: center;
+}
+
+.quiz-home {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#button-row {
+  display: flex;
+  justify-content: space-between;
 }
 
 .center {
@@ -150,3 +161,4 @@ nav {
 .homeButtons {
   margin-top: 80px;
 }
+

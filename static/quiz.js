@@ -1,64 +1,95 @@
 function display_quiz_q(q) {
   let $q_details = $("#q_details");
-  let $row1 = $("<div>").addClass("row");
-  let $group1 = $("<div>").addClass("col-12");
-  $group1.append(
-    $("<div>")
-      .addClass("question-num")
-      .text("Question " + q["id"] + " out of 2")
-  );
-  $group1.append($("<div>").addClass("quiz-question").text(q["question"]));
-  $row1.append($group1);
-  let $row2 = $("<div>").addClass("row");
+
+  let question_number = $("<div>")
+    .attr("name", q["id"])
+    .attr("id", "question-num")
+    .addClass("header")
+    .text("Question " + q["id"] + " out of 2");
+
+  let question_content = $("<div>")
+    .addClass("quiz-question")
+    .text(q["question"]);
+
+  let question_text = $("#q-question");
+  question_text.append(question_number);
+  question_text.append(question_content);
+
   let $width = (12 / (q["media"].length + 1)).toString();
-  for (let media in q["media"]) {
-    let $temp_group = $("<div>").addClass("col-" + $width);
-    if (media.includes(".png") || media.includes(".jpg")) {
-      $temp_group.append(
-        $("<img src='" + media + "'>").attr("alt", "img-q-" + q["id"])
-      );
-    } else {
-      $temp_group.addClass("video");
-      $temp_group.append($("<source src='" + media + "'>"));
-    }
-    $row2.append($temp_group);
-  }
-  let $temp_group = $("<div>").addClass("col-" + $width);
-  let $form = "<form id='quizForm'>";
+
+  let quiz_options = $("#q-options");
+  let form = $("<form>");
   for (let option in q["options"]) {
-    $form =
-      $form +
-      "<input type='radio' id='" +
-      option +
-      "' name='" +
-      q["id"] +
-      "' value='" +
-      option +
-      "'></input>";
+    let newOption = $("<input>", {
+      type: "radio",
+      id: option,
+      name: q["id"],
+      value: option,
+    });
 
-    $form =
-      $form +
-      "<label for='" +
-      option +
-      "'>" +
-      q["options"][option] +
-      "</label><br>";
+    let label = $("<label>", { for: option }).text(q["options"][option]);
+    form.append(newOption, label, "<br>");
   }
+  quiz_options.append(form);
 
-  $form =
-    $form +
-    "<button type='button' id='submit-button'" +
-    // "onclick='checkAnswers('" +
-    // q["id"] +
-    // "', '" +
-    // q["correct"] +
-    // "')
-    ">Submit</button></form>";
+  let submitBtn = $("<button>")
+    .text("Submit")
+    .addClass("btn btn-primary")
+    .attr("type", "submit")
+    .attr("id", "submit-button");
 
-  $temp_group.append($($form));
-  $row2.append($temp_group);
-  $q_details.append($row1);
-  $q_details.append($row2);
+  submitBtn.click(function () {
+    event.preventDefault();
+
+    let questionId = $("#question-num").attr("name");
+    console.log("questionId", questionId);
+    let selectedOptionIndex = $(
+      "input[name='" + questionId + "']:checked"
+    ).val();
+    console.log("selectedOptionIndex", selectedOptionIndex);
+    if (selectedOptionIndex !== -1) {
+      $.ajax({
+        type: "POST",
+        url: "/save_answer",
+        dataType: "json",
+        contentType: "application/json; charset=utf-8",
+        data: JSON.stringify({ id: questionId, answer: selectedOptionIndex }),
+        success: function (result) {
+          // let $next_q = (parseInt(id) + 1).toString();
+          // window.location.href = "/quiz/" + $next_q;
+          let submitButton = $("#submit-button");
+          let nextButton = $("#next-button");
+
+          submitButton.prop("disabled", true);
+          nextButton.prop("disabled", false);
+          console.log("Answer successfully saved");
+        },
+        error: function (request, status, error) {
+          console.log("Error");
+          console.log(request);
+          console.log(status);
+          console.log(error);
+        },
+      });
+    } else {
+      console.log("No answer selected yet");
+    }
+  });
+
+  $("#button-row").append(submitBtn);
+
+  let nextButton = $("<button>")
+    .text("Next")
+    .addClass("btn btn-secondary")
+    .attr("id", "next-button")
+    .prop("disabled", true);
+
+  nextButton.click(function () {
+    let questionId = $("#question-num").attr("name");
+    let next_q = (parseInt(questionId) + 1).toString();
+    window.location.href = "/quiz/" + next_q;
+  });
+  $("#button-row").append(nextButton);
 }
 
 function checkAnswers(id, correct) {
@@ -79,35 +110,20 @@ function checkAnswers(id, correct) {
       option.disabled = true;
     });
 
-    let submitButton = document.getElementById("submit-button");
-    submitButton.remove();
-    let nextButton = document.createElement("button");
-    nextButton.textContent = "Next";
-    nextButton.onclick = function () {
-      $.ajax({
-        type: "POST",
-        url: "/save_answer",
-        dataType: "json",
-        contentType: "application/json; charset=utf-8",
-        data: JSON.stringify({ id: id, answer: selectedAnswer }),
-        success: function (result) {
-          let $next_q = (parseInt(id) + 1).toString();
-          window.location.href = "/quiz/" + $next_q;
-        },
-        error: function (request, status, error) {
-          console.log("Error");
-          console.log(request);
-          console.log(status);
-          console.log(error);
-        },
-      });
-    };
-    document.getElementById("quizForm").appendChild(nextButton);
+    // let submitButton = document.getElementById("submit-button");
+    // submitButton.remove();
+    // let nextButton = document.createElement("button");
+    // nextButton.textContent = "Next";
+    // document.getElementById("q-details").appendChild(nextButton);
+    // let submitButton = $("#submit-button");
+    // submitButton.prop("disabled", true);
+
+    // let nextButton = $("<button>").text("Next");
+    // $("#q_details").append(nextButton);
   }
 }
 
 function display_result_text(c) {
-  console.log("c in display_result_text()" + c);
   let $result_text = $("#result_text");
   let $group = $("<div>").addClass("center");
   $group.append($("<div>").text("You scored " + c + " out of 2."));
