@@ -1,9 +1,5 @@
 {% extends "layout.html" %} {% block content %}
 
-<script
-  type="text/javascript"
-  src="{{ url_for('static', filename = 'quiz.js') }}"
-></script>
 <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
 <link
@@ -18,18 +14,16 @@
 
 <script>
   let correct_count  = {{correct_count|tojson}};
-
-  $(document).ready(function() {
-      console.log('correct_count ' + correct_count)
-      display_result_text(correct_count)
-      $("#home-button").click(function() {
-          window.location.href = "/"
-      })
-  });
 </script>
 
-<div id="result_text"></div>
+<script
+  type="text/javascript"
+  src="{{ url_for('static', filename = 'quiz_result.js') }}"
+></script>
 
-<button class="btn btn-primary" id="home-button">Return Home</button>
+<div class="quiz-home">
+  <div id="result_text"></div>
 
+  <button class="btn btn-primary" id="home-button">Return Home</button>
+</div>
 {% endblock %}

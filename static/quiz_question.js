@@ -1,6 +1,12 @@
-function display_quiz_q(q) {
-  let $q_details = $("#q_details");
+$(document).ready(function () {
+  display_quiz_q(requested_q);
 
+  $("#submit-button").click(function () {
+    checkAnswers(requested_q["id"], requested_q["correct"]);
+  });
+});
+
+function display_quiz_q(q) {
   let question_number = $("<div>")
     .attr("name", q["id"])
     .attr("id", "question-num")
@@ -32,6 +38,10 @@ function display_quiz_q(q) {
   }
   quiz_options.append(form);
 
+  if (q["media"].length > 0) {
+    $("#video-media").attr("src", q["media"][0]);
+  }
+
   let submitBtn = $("<button>")
     .text("Submit")
     .addClass("btn btn-primary")
@@ -42,12 +52,13 @@ function display_quiz_q(q) {
     event.preventDefault();
 
     let questionId = $("#question-num").attr("name");
-    console.log("questionId", questionId);
     let selectedOptionIndex = $(
       "input[name='" + questionId + "']:checked"
     ).val();
+
     console.log("selectedOptionIndex", selectedOptionIndex);
-    if (selectedOptionIndex !== -1) {
+
+    if (selectedOptionIndex) {
       $.ajax({
         type: "POST",
         url: "/save_answer",
@@ -55,8 +66,6 @@ function display_quiz_q(q) {
         contentType: "application/json; charset=utf-8",
         data: JSON.stringify({ id: questionId, answer: selectedOptionIndex }),
         success: function (result) {
-          // let $next_q = (parseInt(id) + 1).toString();
-          // window.location.href = "/quiz/" + $next_q;
           let submitButton = $("#submit-button");
           let nextButton = $("#next-button");
 
@@ -94,9 +103,8 @@ function display_quiz_q(q) {
 
 function checkAnswers(id, correct) {
   let correctAnswerIdx = correct;
-  let selectedAnswer = document.querySelector(
-    'input[name="' + id + '"]:checked'
-  ).value;
+  let questionId = $("#question-num").attr("name");
+  let selectedAnswer = $("input[name='" + questionId + "']:checked").val();
 
   if (selectedAnswer) {
     let options = document.querySelectorAll('input[name="' + id + '"]');
@@ -109,32 +117,5 @@ function checkAnswers(id, correct) {
       }
       option.disabled = true;
     });
-
-    // let submitButton = document.getElementById("submit-button");
-    // submitButton.remove();
-    // let nextButton = document.createElement("button");
-    // nextButton.textContent = "Next";
-    // document.getElementById("q-details").appendChild(nextButton);
-    // let submitButton = $("#submit-button");
-    // submitButton.prop("disabled", true);
-
-    // let nextButton = $("<button>").text("Next");
-    // $("#q_details").append(nextButton);
   }
-}
-
-function display_result_text(c) {
-  let $result_text = $("#result_text");
-  let $group = $("<div>").addClass("center");
-  $group.append($("<div>").text("You scored " + c + " out of 2."));
-  if (parseInt(c) < 2) {
-    $group.append(
-      $("<div>").text(
-        "If you think you can do better, review the material and then try again!"
-      )
-    );
-  } else {
-    $group.append($("<div>").text("Great job!"));
-  }
-  $result_text.append($group);
 }
