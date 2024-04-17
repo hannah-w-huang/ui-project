@@ -24,10 +24,17 @@ function display_exercise(exercise_id) {
 
             if (exercise_id < 4) {
                 $('#next_or_home_button').text("Next Exercise");
+<<<<<<< HEAD
                 $('#upper_to_lower_button').hide()
             } else {
                 $('#next_or_home_button').text("Upper Body Home");
                 $('#upper_to_lower_button').show()
+=======
+                $('upper_to_lower_button').hide()
+            } else {
+                $('#next_or_home_button').text("Upper Body Home");
+                $('upper_to_lower_button').show()
+>>>>>>> 912d68e (add btns linking to next section)
             }
 
             history.pushState(null, null, "/learn_upper/" + exercise_id.toString());
