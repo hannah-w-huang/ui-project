@@ -79,14 +79,24 @@
       "question": "If you are using the assisted pull up machine with the weight set at 40 pounds and it is too easy, which weight should you try instead?",
       "media": [],
       "correct": "0",
-      "options": ["20 pounds", "60 pounds"]
+      "options": ["20 pounds", "60 pounds"],
+      "explanation": "The assisted pull up machine reduces your load by the weight it is set to. Hence, if it is too easy you should reduce the weight."
     },
     "2": {
       "id": "2",
       "question": "What motion best describes this exercise? (Choose One)",
       "media": ["https://www.youtube.com/embed/QaMyxkH1z48?feature=share"],
       "correct": "1",
-      "options": ["push", "pull", "bend", "extend"]
+      "options": ["push", "pull", "bend", "extend"],
+      "explanation": "This exercise (seated cable rows) includes a pulling motion towards your body."
+    },
+    "3": {
+      "id": "3",
+      "question": "What muscle does this exercise focus on? (Choose One)?",
+      "media": ["https://www.youtube.com/embed/QaMyxkH1z48?feature=share"],
+      "correct": "3",
+      "options": ["triceps", "abdominals", "quadriceps", "lattimus dorsi"],
+      "explanation": "This exercise (seated cable rows) includes a pulling motion towards your body. Based on this, we know that it works the back muscles, including the lattimus dorsi."
     }
   }
 }

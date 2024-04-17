@@ -78,7 +78,9 @@ nav {
 }
 
 .correct {
-  background-color: lightgreen;
+  border: 2px solid lightgreen;
+  border-radius: 5px;
+  padding: 2px;
 }
 
 .incorrect {
@@ -165,4 +167,8 @@ nav {
 
 #result_text {
   margin-bottom: 10px;
+}
+
+.answer-option {
+  margin: 5px;
 }
