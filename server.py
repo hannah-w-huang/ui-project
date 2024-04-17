@@ -11,23 +11,9 @@ app = Flask(__name__)
 NUM_EXERCISES_CONST = 4
 
 with open('data.json', 'r') as file:
-    data = json.load(file)
-
-
-#quiz data
-question = {"1": {'id': "1",
-                  'question': "If you are using the assisted pull up machine with the weight set at 40 pounds and it is too easy, which weight should you try instead?",
-                  'media': [],
-                  'correct': "0",
-                  'options': ['20 pounds', '60 pounds']
-                  },
-            "2": {'id': '2',
-                  'question': "Question 2?",
-                  'media': [],
-                  'correct': "2",
-                  'options': ['optionA', 'optionB', 'optionC']
-                  }
-            }
+   data_file = json.load(file)
+   data = data_file['data']
+   question = data_file['question']
 
 # quiz progress data
 quiz_selections = {}
@@ -112,11 +98,10 @@ def quiz_home():
 @app.route('/quiz/<id>', methods=['GET'])
 def quiz_question(id):
    global correct_count
-   if int(id) < 3: # for 2 question quiz, hardcoded 3 for now
+   if int(id) < (len(question) + 1): # for a 2 question quiz, less than 3
       requested_q = question[str(id)]
       return render_template('quiz_question.html', requested_q=requested_q) 
    else:
-      # correct count doesnt show up
       return render_template('quiz_result.html', correct_count=correct_count) 
 
 @app.route('/save_answer', methods=['POST'])
@@ -135,7 +120,6 @@ def save_answer():
 
    quiz_selections[data_id] = answer
    return quiz_selections
-   # return redirect(url_for('new_route'))
 
 
 # @app.route('/save_answer/<id>', methods=['POST'])

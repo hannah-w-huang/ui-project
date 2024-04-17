@@ -2,7 +2,7 @@
 
 <script
   type="text/javascript"
-  src="{{ url_for('static', filename = 'quiz.js') }}"
+  src="{{ url_for('static', filename = 'quiz_question.js') }}"
 ></script>
 <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
@@ -17,25 +17,26 @@
 />
 
 <script>
-    let requested_q  = {{requested_q|tojson}};
-    console.log(requested_q)
-    $(document).ready(function() {
-        display_quiz_q(requested_q)
-
-        $("#submit-button").click(function() {
-        // Call your function here
-        console.log("REQUESTED_Q ID: "+ requested_q['id']);
-        console.log("REQUESTED_Q CORRECT: "+ requested_q['correct']);
-        checkAnswers(requested_q['id'], requested_q['correct']);
-        }
-  );
-
-    });
+  let requested_q  = {{requested_q|tojson}};
+  console.log(requested_q);
 </script>
 
-<div id="q_details">
-  <div id="q-question" class="col-12"></div>
-  <div id="q-options" class="col-12"></div>
+<div id="q_details" class="col-12">
+  <div id="q-question"></div>
+  <div class="row">
+    <div id="q-options" class="col-4"></div>
+    <div class="col-4 center-video">
+      <iframe
+        id="video-media"
+        width="280"
+        height="450"
+        src=""
+        title="YouTube video player"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
   <div id="button-row" class="col-12"></div>
 </div>
 

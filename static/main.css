@@ -74,6 +74,7 @@ nav {
 
 .quiz-question {
   color: grey;
+  margin: 10px 0 20px 0;
 }
 
 .correct {
@@ -160,4 +161,8 @@ nav {
 #button-row {
   display: flex;
   justify-content: space-between;
+}
+
+#result_text {
+  margin-bottom: 10px;
 }

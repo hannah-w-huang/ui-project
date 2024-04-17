@@ -2,7 +2,7 @@
 
 <script
   type="text/javascript"
-  src="{{ url_for('static', filename = 'quiz.js') }}"
+  src="{{ url_for('static', filename = 'quiz_home.js') }}"
 ></script>
 <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
@@ -16,20 +16,14 @@
   crossorigin="anonymous"
 />
 
-<script>
-  $(document).ready(function () {
-    $("#quiz-start-button").click(function () {
-      window.location.href = "/quiz/1";
-    });
-  });
-</script>
+<script></script>
 
 <div class="quiz-home">
   <div class="header">
     Have you studied up? Take the quiz and see how you do!
   </div>
   <button type="button" class="btn btn-primary" id="quiz-start-button">
-    Take me to the quiz
+    Take quiz
   </button>
 </div>
 
