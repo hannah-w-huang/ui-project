@@ -142,3 +142,23 @@ nav {
   display: flex;
   justify-content: space-between;
 }
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#welcomeIntro {
+  font-size: 30px;
+  color: gray;
+}
+
+#welcomeTitle {
+  font-size: 50px;
+}
+
+.homeButtons {
+  margin-top: 80px;
+}
+
