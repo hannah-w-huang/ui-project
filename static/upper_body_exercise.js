@@ -24,8 +24,10 @@ function display_exercise(exercise_id) {
 
             if (exercise_id < 4) {
                 $('#next_or_home_button').text("Next Exercise");
+                $('#upper_to_lower_button').hide()
             } else {
                 $('#next_or_home_button').text("Upper Body Home");
+                $('#upper_to_lower_button').show()
             }
 
             history.pushState(null, null, "/learn_upper/" + exercise_id.toString());
@@ -46,6 +48,11 @@ function update_local_storage() {
 
 $(document).ready(function() {
     let current_exercise_id = localStorage.getItem('upper_body_current_exercise_id') || 1;
+
+    $('#upper_to_lower_button').click(function(e) {
+        e.preventDefault();
+        window.location.href = '/lower_body'; 
+    });
 
     display_exercise(current_exercise_id); 
 

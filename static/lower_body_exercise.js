@@ -24,8 +24,10 @@ function display_exercise(exercise_id) {
 
             if (exercise_id < 8) {
                 $('#next_or_home_button').text("Next Exercise");
+                $('#lower_to_quiz_button').hide()
             } else {
                 $('#next_or_home_button').text("Lower Body Home");
+                $('#lower_to_quiz_button').show()
             }
 
             history.pushState(null, null, "/learn_lower/" + exercise_id.toString());
@@ -46,6 +48,11 @@ function update_local_storage() {
 
 $(document).ready(function() {
     let current_exercise_id = localStorage.getItem('lower_body_current_exercise_id') || 5;
+
+    $('#lower_to_quiz_button').click(function(e) {
+        e.preventDefault();
+        window.location.href = '/quiz'; 
+    });
 
     display_exercise(current_exercise_id); 
 

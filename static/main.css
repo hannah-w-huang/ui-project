@@ -165,6 +165,17 @@ nav {
   margin-top: 80px;
 }
 
+.quiz-home {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#button-row {
+  display: flex;
+  justify-content: space-between;
+}
+
 #result_text {
   margin-bottom: 10px;
 }
