@@ -2,8 +2,12 @@
   font-family: Arial
  }
 
+ container {
+  margin:10px;
+ }
+
 nav {
-  background-color: #cce6fa;
+  background-color: #659acf;
   margin-bottom: 20px;
 }
 
@@ -33,7 +37,8 @@ nav {
 
 .align-image-text {
   text-align: center;
-  color: red;
+  color: #659acf;
+  font-weight: bold;
   margin-bottom: 10px;
   margin-top: -5px;
   font-size: 18px;
@@ -131,6 +136,7 @@ nav {
   flex-direction: column;
   justify-content: center;
   height: 100%;
+  margin-left: 60px;
 }
 
 .center-image {
@@ -223,11 +229,10 @@ nav {
 
 #completion_status_lower {
   color: gray;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 #completion_status_upper {
   color: gray;
   font-size: 18px;
-
 }
