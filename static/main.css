@@ -84,7 +84,8 @@ nav {
 }
 
 .incorrect {
-  background-color: tomato;
+  text-decoration: line-through; /* Apply the strikethrough effect */
+  text-decoration-color: tomato;
 }
 
 .center-exercise-info {
