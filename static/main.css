@@ -1,5 +1,9 @@
+* {
+  font-family: Arial
+ }
+
 nav {
-  background-color: darkgray;
+  background-color: #cce6fa;
   margin-bottom: 20px;
 }
 
@@ -7,6 +11,7 @@ nav {
   margin: 10px;
   text-align: center;
   font-size: 20px;
+  color:lightgray;
 }
 
 .format-top-link {
@@ -99,6 +104,11 @@ nav {
 }
 
 .exercise-info {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.exercise-name-info {
   font-size: 25px;
   font-weight: bold;
 }
@@ -108,11 +118,11 @@ nav {
 }
 
 #exercise_motion {
-  font-size: 25px;
+  font-size: 20px;
 }
 
 #exercise_muscles {
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .center-video {
@@ -153,7 +163,7 @@ nav {
 }
 
 #welcomeIntro {
-  font-size: 30px;
+  font-size: 26px;
   color: gray;
 }
 
@@ -185,7 +195,7 @@ nav {
 }
 
 .button-description{
-  margin-top: 10px;
+  margin-top: 30px;
 }
 
 .weight-intro-title{
@@ -201,4 +211,22 @@ nav {
 .btn-primary:hover{
   background-color: #0041C2;
   border-color: #0041C2;
+}
+
+#welcomeImg {
+  display: block;
+  margin: 0 auto;
+  height: 100%;
+  width: 40%;
+}
+
+#completion_status_lower {
+  color: gray;
+  font-size: 16px;
+}
+
+#completion_status_upper {
+  color: gray;
+  font-size: 18px;
+
 }
