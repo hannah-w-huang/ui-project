@@ -80,6 +80,8 @@ function display_quiz_q(q, q_count) {
 
           submitButton.prop("disabled", true);
           nextButton.prop("disabled", false);
+          nextButton.removeClass("btn-outline-secondary");
+          nextButton.addClass("btn-secondary");
           explanation.show();
 
           console.log("Answer successfully saved");
@@ -100,7 +102,7 @@ function display_quiz_q(q, q_count) {
 
   let nextButton = $("<button>")
     .text("Next")
-    .addClass("btn btn-secondary")
+    .addClass("btn btn-outline-secondary")
     .attr("id", "next-button")
     .prop("disabled", true);
 
