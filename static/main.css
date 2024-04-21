@@ -162,7 +162,7 @@ nav {
 }
 
 .homeButtons {
-  margin-top: 80px;
+  margin-top: 70px;
 }
 
 .quiz-home {
@@ -182,4 +182,23 @@ nav {
 
 .answer-option {
   margin: 5px;
+}
+
+.button-description{
+  margin-top: 10px;
+}
+
+.weight-intro-title{
+  font-size: 30px;
+  margin-bottom: 25px;
+}
+
+.btn-primary{
+  background-color: #1E90FF;
+  border-color: #1E90FF;
+}
+
+.btn-primary:hover{
+  background-color: #0041C2;
+  border-color: #0041C2;
 }
