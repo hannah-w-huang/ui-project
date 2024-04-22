@@ -244,3 +244,8 @@ nav {
   color: gray;
   font-size: 18px;
 }
+
+#exercise_video {
+  width: 90%;
+   height: 545px;
+}
