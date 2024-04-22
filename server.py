@@ -14,10 +14,12 @@ with open('data.json', 'r') as file:
    data_file = json.load(file)
    data = data_file['data']
    question = data_file['question']
+   results = data_file['results']
 
 # quiz progress data
 quiz_selections = {}
 correct_count = 0
+done_quiz = 0
 
 #learning data
 learning_user_data = {"upper": {}, "lower":{}}
@@ -98,11 +100,20 @@ def quiz_home():
 @app.route('/quiz/<id>', methods=['GET'])
 def quiz_question(id):
    global correct_count
+   global done_quiz
    if int(id) < (len(question) + 1): # for a 2 question quiz, less than 3
+      done_quiz = 0
       requested_q = question[str(id)]
       return render_template('quiz_question.html', requested_q=requested_q, q_count=len(question)) 
+   elif done_quiz == 0:
+      current_attempt = str(len(results) + 1)
+      results[current_attempt] = {"correct": str(correct_count), "percent": str(round((correct_count / len(question)*100)))}
+      done_quiz = -1
+      with open('data.json', 'w') as file:
+         json.dump(data_file, file)
+      return render_template('quiz_result.html', correct_count=correct_count, q_count=len(question), prev_results=results) 
    else:
-      return render_template('quiz_result.html', correct_count=correct_count, q_count=len(question)) 
+      return render_template('quiz_result.html', correct_count=correct_count, q_count=len(question), prev_results=results) 
 
 @app.route('/save_answer', methods=['POST'])
 def save_answer():

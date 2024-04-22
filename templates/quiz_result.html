@@ -15,6 +15,7 @@
 <script>
   let correct_count  = {{correct_count|tojson}};
   let q_count = {{q_count|tojson}};
+  let prev_results = {{prev_results|tojson}};
 </script>
 
 <script
@@ -24,7 +25,26 @@
 
 <div class="quiz-home">
   <div id="result_text"></div>
-
+  <div class="container">
+    <div class="row">
+      <div class="col-4"></div>
+      <div class="col-4 general-table">
+        <div class="row table-header">
+          <div class="col-4">
+            Attempt
+          </div>
+          <div class="col-4">
+            Amount Correct
+          </div>
+          <div class="col-4">
+            Percentage
+          </div>
+        </div>
+        <div id="prev_results_table"></div>
+      </div>
+    </div>
+  </div>
+  <br>
   <button class="btn btn-primary" id="home-button">Return Home</button>
 </div>
 {% endblock %}

@@ -201,6 +201,14 @@ nav {
   margin: 5px;
 }
 
+.table-header {
+  font-weight: bold;
+}
+.general-table {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+
 .button-description{
   margin-top: 30px;
 }
