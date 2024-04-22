@@ -1,5 +1,13 @@
+* {
+  font-family: Arial
+ }
+
+ container {
+  margin:10px;
+ }
+
 nav {
-  background-color: darkgray;
+  background-color: #659acf;
   margin-bottom: 20px;
 }
 
@@ -7,6 +15,7 @@ nav {
   margin: 10px;
   text-align: center;
   font-size: 20px;
+  color:lightgray;
 }
 
 .format-top-link {
@@ -28,7 +37,8 @@ nav {
 
 .align-image-text {
   text-align: center;
-  color: red;
+  color: #659acf;
+  font-weight: bold;
   margin-bottom: 10px;
   margin-top: -5px;
   font-size: 18px;
@@ -84,7 +94,8 @@ nav {
 }
 
 .incorrect {
-  background-color: tomato;
+  text-decoration: line-through; /* Apply the strikethrough effect */
+  text-decoration-color: tomato;
 }
 
 .center-exercise-info {
@@ -99,6 +110,11 @@ nav {
 }
 
 .exercise-info {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.exercise-name-info {
   font-size: 25px;
   font-weight: bold;
 }
@@ -108,11 +124,11 @@ nav {
 }
 
 #exercise_motion {
-  font-size: 25px;
+  font-size: 20px;
 }
 
 #exercise_muscles {
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .center-video {
@@ -120,6 +136,7 @@ nav {
   flex-direction: column;
   justify-content: center;
   height: 100%;
+  margin-left: 60px;
 }
 
 .center-image {
@@ -153,7 +170,7 @@ nav {
 }
 
 #welcomeIntro {
-  font-size: 30px;
+  font-size: 26px;
   color: gray;
 }
 
@@ -162,7 +179,7 @@ nav {
 }
 
 .homeButtons {
-  margin-top: 80px;
+  margin-top: 70px;
 }
 
 .quiz-home {
@@ -191,4 +208,39 @@ nav {
   border: 1px solid black;
   padding: 8px;
   text-align: center;
+
+.button-description{
+  margin-top: 30px;
+}
+
+.weight-intro-title{
+  font-size: 30px;
+  margin-bottom: 25px;
+}
+
+.btn-primary{
+  background-color: #1E90FF;
+  border-color: #1E90FF;
+}
+
+.btn-primary:hover{
+  background-color: #0041C2;
+  border-color: #0041C2;
+}
+
+#welcomeImg {
+  display: block;
+  margin: 0 auto;
+  height: 100%;
+  width: 40%;
+}
+
+#completion_status_lower {
+  color: gray;
+  font-size: 18px;
+}
+
+#completion_status_upper {
+  color: gray;
+  font-size: 18px;
 }

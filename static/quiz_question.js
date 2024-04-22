@@ -1,9 +1,5 @@
 $(document).ready(function () {
   display_quiz_q(requested_q, q_count);
-
-  $("#submit-button").click(function () {
-    checkAnswers(requested_q["id"], requested_q["correct"]);
-  });
 });
 
 function display_quiz_q(q, q_count) {
@@ -57,8 +53,6 @@ function display_quiz_q(q, q_count) {
     .attr("id", "submit-button");
 
   submitBtn.click(function () {
-    event.preventDefault();
-
     let questionId = $("#question-num").attr("name");
     let selectedOptionIndex = $(
       "input[name='" + questionId + "']:checked"
@@ -67,6 +61,8 @@ function display_quiz_q(q, q_count) {
     console.log("selectedOptionIndex", selectedOptionIndex);
 
     if (selectedOptionIndex) {
+      checkAnswers(requested_q["id"], requested_q["correct"]);
+
       $.ajax({
         type: "POST",
         url: "/save_answer",
@@ -80,6 +76,8 @@ function display_quiz_q(q, q_count) {
 
           submitButton.prop("disabled", true);
           nextButton.prop("disabled", false);
+          nextButton.removeClass("btn-outline-secondary");
+          nextButton.addClass("btn-secondary");
           explanation.show();
 
           console.log("Answer successfully saved");
@@ -100,7 +98,7 @@ function display_quiz_q(q, q_count) {
 
   let nextButton = $("<button>")
     .text("Next")
-    .addClass("btn btn-secondary")
+    .addClass("btn btn-outline-secondary")
     .attr("id", "next-button")
     .prop("disabled", true);
 
@@ -118,15 +116,13 @@ function checkAnswers(id, correct) {
   let selectedAnswer = $("input[name='" + questionId + "']:checked").val();
 
   if (selectedAnswer) {
-    let options = document.querySelectorAll('input[name="' + id + '"]');
-    options.forEach(function (option) {
-      console.log("option " + option.value);
-      if (option.value === correctAnswerIdx) {
-        option.nextElementSibling.classList.add("correct");
-      } else {
-        option.nextElementSibling.classList.add("incorrect");
+    $('input[name="' + id + '"]').each(function () {
+      // Check if the value of the current input element matches the correct answer
+      if ($(this).val() === correctAnswerIdx) {
+        $(this).next().addClass("correct");
+      } else if ($(this).val() === selectedAnswer) {
+        $(this).next().addClass("incorrect");
       }
-      option.disabled = true;
     });
   }
 }

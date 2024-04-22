@@ -163,6 +163,9 @@ def learn(lesson_id):
 
    return jsonify({"name": name, "motion": motion, "muscles": muscles, "video": video, "image": image})
 
+@app.route('/weight_intro')
+def weight_intro():
+   return render_template('weight_intro.html') 
 
 if __name__ == '__main__':
    app.run(debug = True)
