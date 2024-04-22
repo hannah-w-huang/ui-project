@@ -183,3 +183,12 @@ nav {
 .answer-option {
   margin: 5px;
 }
+
+.table-header {
+  font-weight: bold;
+}
+.general-table {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+}

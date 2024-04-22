@@ -14,8 +14,18 @@ function display_result_text(c, count) {
   $result_text.append($group);
 }
 
+function display_previous_results(prev_results) {
+  let $prev_results_table = $("#prev_results_table");
+  Object.keys(prev_results).forEach(function(attempt) {
+    let $row = $("<div>").addClass("row")
+    $row.append($("<div class='col-4'>" + attempt + "</div><div class='col-4'>" + prev_results[attempt]["correct"] + "</div><div class='col-4'>" + prev_results[attempt]["percent"] + "%" + "</div>"))
+    $prev_results_table.append($row)
+})
+}
+
 $(document).ready(function () {
   display_result_text(correct_count, q_count);
+  display_previous_results(prev_results)
   $("#home-button").click(function () {
     window.location.href = "/";
   });
