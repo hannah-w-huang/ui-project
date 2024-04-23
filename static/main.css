@@ -224,13 +224,13 @@ nav {
 }
 
 .btn-primary {
-  background-color: #1e90ff;
-  border-color: #1e90ff;
+  background-color: #1e90ff !important;
+  border-color: #1e90ff !important;
 }
 
 .btn-primary:hover {
-  background-color: #0041c2;
-  border-color: #0041c2;
+  background-color: #0041c2 !important;
+  border-color: #0041c2 !important;
 }
 
 #welcomeImg {
