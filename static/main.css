@@ -171,6 +171,7 @@ nav {
 #welcomeIntro {
   font-size: 26px;
   color: gray;
+  margin-bottom: 20px;
 }
 
 #welcomeTitle {
@@ -178,7 +179,7 @@ nav {
 }
 
 .homeButtons {
-  margin-top: 70px;
+  margin-top: 40px;
 }
 
 .quiz-home {
@@ -210,7 +211,7 @@ nav {
 }
 
 .button-description{
-  margin-top: 30px;
+  margin-top: 60px;
 }
 
 .weight-intro-title{
@@ -248,4 +249,13 @@ nav {
 #exercise_video {
   width: 90%;
    height: 545px;
+}
+
+.button-description-welcome{
+  margin-top: 70px;
+  font-size: 18px;
+}
+
+.homeButtonsWelcome{
+  margin-top: 30px;
 }
