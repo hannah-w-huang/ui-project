@@ -1,10 +1,10 @@
 * {
-  font-family: Arial
- }
+  font-family: Arial;
+}
 
- container {
-  margin:10px;
- }
+container {
+  margin: 10px;
+}
 
 nav {
   background-color: #659acf;
@@ -15,7 +15,7 @@ nav {
   margin: 10px;
   text-align: center;
   font-size: 20px;
-  color:lightgray;
+  color: lightgray;
 }
 
 .format-top-link {
@@ -85,6 +85,10 @@ nav {
 .quiz-question {
   color: grey;
   margin: 10px 0 20px 0;
+}
+
+.gray-font {
+  color: grey;
 }
 
 .correct {
@@ -210,23 +214,23 @@ nav {
   text-align: center;
 }
 
-.button-description{
+.button-description {
   margin-top: 60px;
 }
 
-.weight-intro-title{
+.weight-intro-title {
   font-size: 30px;
   margin-bottom: 25px;
 }
 
-.btn-primary{
-  background-color: #1E90FF;
-  border-color: #1E90FF;
+.btn-primary {
+  background-color: #1e90ff;
+  border-color: #1e90ff;
 }
 
-.btn-primary:hover{
-  background-color: #0041C2;
-  border-color: #0041C2;
+.btn-primary:hover {
+  background-color: #0041c2;
+  border-color: #0041c2;
 }
 
 #welcomeImg {
@@ -248,14 +252,14 @@ nav {
 
 #exercise_video {
   width: 90%;
-   height: 545px;
+  height: 545px;
 }
 
-.button-description-welcome{
+.button-description-welcome {
   margin-top: 70px;
   font-size: 18px;
 }
 
-.homeButtonsWelcome{
+.homeButtonsWelcome {
   margin-top: 30px;
 }
