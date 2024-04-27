@@ -110,7 +110,7 @@ def quiz_question(id):
       results[current_attempt] = {"correct": str(correct_count), "percent": str(round((correct_count / len(question)*100)))}
       done_quiz = -1
       with open('data.json', 'w') as file:
-         json.dump(data_file, file)
+         json.dump(data_file, file, indent=4)
       return render_template('quiz_result.html', correct_count=correct_count, q_count=len(question), prev_results=results) 
    else:
       return render_template('quiz_result.html', correct_count=correct_count, q_count=len(question), prev_results=results) 
