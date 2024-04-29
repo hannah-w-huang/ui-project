@@ -43,7 +43,44 @@ function display_quiz_q(q, q_count) {
   quiz_options.append(answer_explanation);
 
   if (q["media"].length > 0) {
-    $("#video-media").attr("src", q["media"][0]);
+      // $("#video-media").attr("src", q["media"][0]);
+    if (q["media"][0].endsWith("=share")) {
+      let div = document.createElement("div");
+      div.className = "center-video";
+      let iframe = document.createElement("iframe");
+      iframe.width = "230";
+      iframe.height = "460";
+      iframe.src = q["media"][0];
+      iframe.title = "YouTube video player";
+      iframe.allowFullscreen = true;
+      div.appendChild(iframe);
+      let parentElement = document.getElementById("vid-media");
+      parentElement.classList.add("col-4");
+      parentElement.appendChild(div);
+
+      if (q["media"].length > 1) {
+        let div2 = document.createElement("div");
+        div2.className = "center-video";
+        let img = document.createElement("img");
+        img.src = q["media"][1];
+        img.alt = "media-1";
+        div2.appendChild(img);
+        let parentElement2 = document.getElementById("img-media");
+        parentElement2.classList.add("col-4");
+        parentElement2.appendChild(div2);
+      }
+    }
+    else {
+      let div = document.createElement("div");
+      div.className = "center-video";
+      let img = document.createElement("img");
+      img.src = q["media"][0];
+      img.alt = "media-0";
+      div.appendChild(img);
+      let parentElement = document.getElementById("img-media");
+      parentElement.classList.add("col-4");
+      parentElement.appendChild(div);
+    }
   }
 
   let submitBtn = $("<button>")

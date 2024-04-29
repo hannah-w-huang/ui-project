@@ -114,6 +114,21 @@
                 "lattimus dorsi"
             ],
             "explanation": "This exercise (seated cable rows) includes a pulling motion towards your body. Based on this, we know that it works the back muscles, including the lattimus dorsi."
+        },
+        "4": {
+            "id": "4",
+            "question": "If you want to exercise the highlighted body part below, which exercise should you do?",
+            "media": [
+                "https://www.shutterstock.com/image-vector/body-chart-medical-diagram-front-260nw-2278648573.jpg"
+            ],
+            "correct": "3",
+            "options": [
+                "leg press",
+                "falling hamstring curl",
+                "lat pull down",
+                "incline bench press"
+            ],
+            "explanation": "The highlighted body part is the chest, which is worked via push exercises for the upper body."
         }
     },
     "results": {
@@ -136,6 +151,14 @@
         "5": {
             "correct": "1",
             "percent": "33"
+        },
+        "6": {
+            "correct": "0",
+            "percent": "0"
+        },
+        "7": {
+            "correct": "0",
+            "percent": "0"
         }
     }
 }
