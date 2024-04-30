@@ -87,7 +87,7 @@
         },
         "2": {
             "id": "2",
-            "question": "What motion best describes this exercise? (Choose One)",
+            "question": "What motion best describes this exercise?",
             "media": [
                 "https://www.youtube.com/embed/QaMyxkH1z48?feature=share"
             ],
@@ -102,7 +102,7 @@
         },
         "3": {
             "id": "3",
-            "question": "What muscle does this exercise focus on? (Choose One)?",
+            "question": "What muscle does this exercise focus on??",
             "media": [
                 "https://www.youtube.com/embed/QaMyxkH1z48?feature=share"
             ],
@@ -129,36 +129,64 @@
                 "incline bench press"
             ],
             "explanation": "The highlighted body part is the chest, which is worked via push exercises for the upper body."
+        },
+        "5": {
+            "id": "5",
+            "question": "Which body part does this work?",
+            "media": [
+                "https://www.shutterstock.com/image-vector/body-chart-medical-diagram-front-260nw-2278648573.jpg"
+            ],
+            "correct": "2",
+            "options": [
+                "A",
+                "B",
+                "C",
+                "D"
+            ],
+            "explanation": "This exercise uses the quadriceps due to the extension motion, which is the large muscle located at the front of the upper leg."
+        },
+        "6": {
+            "id": "6",
+            "question": "If you want to exercise the highlighted body part below, which exercise should you do?",
+            "media": [
+                "https://www.shutterstock.com/image-vector/body-chart-medical-diagram-front-260nw-2278648573.jpg"
+            ],
+            "correct": "1",
+            "options": [
+                "leg press",
+                "seated leg curl",
+                "lat pull down",
+                "incline bench press"
+            ],
+            "explanation": "The highlighted body part is the hamstring, which is worked via bend exercises for the lower body."
+        },
+        "7": {
+            "id": "7",
+            "question": "If your one rep max for shoulder press is 100 pounds, what weight should you start with for your first set?",
+            "media": [],
+            "correct": "1",
+            "options": [
+                "25 pounds",
+                "50 pounds",
+                "75 pounds",
+                "100 pounds"
+            ],
+            "explanation": "You should start with 50%-60% of your 1-rep max to avoid injury."
+        },
+        "8": {
+            "id": "8",
+            "question": "Based on its name, what body part do you think the 'Lying Leg Curl' machine works?",
+            "media": [],
+            "correct": "0",
+            "options": [
+                "hamstrings",
+                "quadriceps",
+                "lattimus dorsi",
+                "chest"
+            ],
+            "explanation": "The word 'curl' should tip you off that it is a bend exercise and therefore works the hamstrings."
         }
     },
     "results": {
-        "1": {
-            "correct": "1",
-            "percent": "33"
-        },
-        "2": {
-            "correct": "2",
-            "percent": "67"
-        },
-        "3": {
-            "correct": "1",
-            "percent": "33"
-        },
-        "4": {
-            "correct": "1",
-            "percent": "33"
-        },
-        "5": {
-            "correct": "1",
-            "percent": "33"
-        },
-        "6": {
-            "correct": "0",
-            "percent": "0"
-        },
-        "7": {
-            "correct": "0",
-            "percent": "0"
-        }
     }
 }
