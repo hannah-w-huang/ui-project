@@ -11,7 +11,7 @@ function display_result_text(c, count) {
         .addClass("gray-font")
     );
   } else {
-    $group.append($("<div>").text("Great job!"));
+    $group.append($("<div>").text("Great job!").addClass("gray-font"));
   }
   $result_text.append($group);
 }
