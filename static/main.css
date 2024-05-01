@@ -311,3 +311,8 @@ nav {
 #upper_to_lower_button {
   font-size: 15px;
 }
+
+#exercise_image {
+  height: 250px;
+  width: auto;
+}
