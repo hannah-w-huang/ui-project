@@ -28,6 +28,7 @@ function display_exercise(exercise_id) {
             } else {
                 $('#next_or_home_button').text("Lower Body Home");
                 $('#lower_to_quiz_button').show()
+                $('#next_or_home_button').addClass("decreaseButtonFont")
             }
 
             history.pushState(null, null, "/learn_lower/" + exercise_id.toString());

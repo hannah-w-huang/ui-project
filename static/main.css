@@ -257,6 +257,10 @@ nav {
   font-size: 18px;
 }
 
+.completion_status_row {
+  margin: 20px;
+}
+
 #exercise_video {
   width: 90%;
   height: 545px;
@@ -298,4 +302,12 @@ nav {
   height: auto;
   max-width: 280px;
   object-fit: contain;
+}
+
+.decreaseButtonFont {
+  font-size: 15px;
+}
+
+#upper_to_lower_button {
+  font-size: 15px;
 }
