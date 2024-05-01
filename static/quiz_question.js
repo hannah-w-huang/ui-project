@@ -43,7 +43,7 @@ function display_quiz_q(q, q_count) {
   quiz_options.append(answer_explanation);
 
   if (q["media"].length > 0) {
-      // $("#video-media").attr("src", q["media"][0]);
+    // $("#video-media").attr("src", q["media"][0]);
     if (q["media"][0].endsWith("=share")) {
       let div = document.createElement("div");
       div.className = "center-video";
@@ -68,9 +68,10 @@ function display_quiz_q(q, q_count) {
         let parentElement2 = document.getElementById("img-media");
         parentElement2.classList.add("col-4");
         parentElement2.appendChild(div2);
+      } else {
+        $("#img-media").remove();
       }
-    }
-    else {
+    } else {
       let div = document.createElement("div");
       div.className = "center-video";
       let img = document.createElement("img");

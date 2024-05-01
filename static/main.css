@@ -110,7 +110,7 @@ nav {
   height: 100%;
   margin-bottom: 30px;
   padding-right: 30px;
-  padding-left: 30px
+  padding-left: 30px;
 }
 
 .format-text {
@@ -146,7 +146,7 @@ nav {
   width: 100%;
 }
 
-.center-image-upper img{
+.center-image-upper img {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -294,7 +294,7 @@ nav {
   align-items: center;
 }
 
-.center-image-lower img{
+.center-image-lower img {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -315,4 +315,7 @@ nav {
 #exercise_image {
   height: 250px;
   width: auto;
+}
+.quiz-question-options {
+  margin-left: 10px;
 }
