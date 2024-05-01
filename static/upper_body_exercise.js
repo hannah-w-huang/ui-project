@@ -28,6 +28,7 @@ function display_exercise(exercise_id) {
             } else {
                 $('#next_or_home_button').text("Upper Body Home");
                 $('#upper_to_lower_button').show()
+                $('#next_or_home_button').addClass("decreaseButtonFont")
             }
 
             history.pushState(null, null, "/learn_upper/" + exercise_id.toString());
