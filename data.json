@@ -134,14 +134,14 @@
             "id": "5",
             "question": "Which body part does this work?",
             "media": [
-                "https://www.shutterstock.com/image-vector/body-chart-medical-diagram-front-260nw-2278648573.jpg"
+                "https://youtube.com/embed/NGuZZy5WMbE?feature=share"
             ],
             "correct": "2",
             "options": [
-                "A",
-                "B",
-                "C",
-                "D"
+                "Chest",
+                "Shoulders",
+                "Quadriceps",
+                "Hamstrings"
             ],
             "explanation": "This exercise uses the quadriceps due to the extension motion, which is the large muscle located at the front of the upper leg."
         },
