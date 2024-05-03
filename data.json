@@ -6,7 +6,7 @@
             "name": "Incline Bench Press",
             "motion": "Pushing weight away from body",
             "muscles": "Pectorals (Chest)",
-            "video": "https://www.youtube.com/embed/YRH3yU6rUio?si=vuLhEX_fOu9MyeER",
+            "video": "https://www.youtube.com/embed/YRH3yU6rUio?si=vuLhEX_fOu9MyeER&mute=1",
             "image": "https://www.joionline.net/wp-content/uploads/2019/05/pect.jpg"
         },
         "2": {
@@ -15,7 +15,7 @@
             "name": "Shoulder Press",
             "motion": "Pushing weight away from body",
             "muscles": "Shoulders",
-            "video": "https://youtube.com/embed/ty5hWa6Rl0c?feature=shared",
+            "video": "https://youtube.com/embed/ty5hWa6Rl0c?&mute=1",
             "image": "https://images.fineartamerica.com/images-medium-large-5/15-human-shoulder-muscles-sebastian-kaulitzki.jpg"
         },
         "3": {
@@ -24,7 +24,7 @@
             "name": "Lat Pulldown",
             "motion": "Pulling weight towards body",
             "muscles": "Latissimus Dorsi (Back)",
-            "video": "https://youtube.com/embed/yk9LR8zW9GM?feature=share",
+            "video": "https://youtube.com/embed/yk9LR8zW9GM?&mute=1",
             "image": "https://samarpanphysioclinic.com/wp-content/uploads/2022/07/latisssimus-dorssi-muscle.jpg"
         },
         "4": {
@@ -33,7 +33,7 @@
             "name": "Vertical Row",
             "motion": "Pulling weight towards body",
             "muscles": "Latissimus Dorsi (Back)",
-            "video": "https://youtube.com/embed/4lqOsgtDvEU?feature=share",
+            "video": "https://youtube.com/embed/4lqOsgtDvEU?&mute=1",
             "image": "https://samarpanphysioclinic.com/wp-content/uploads/2022/07/latisssimus-dorssi-muscle.jpg"
         },
         "5": {
@@ -42,7 +42,7 @@
             "name": "Seated Leg Curl",
             "motion": "Moving weight by bending/flexing at the knee",
             "muscles": "Hamstrings",
-            "video": "https://youtube.com/embed/I8x6lEoDhrc?feature=share",
+            "video": "https://youtube.com/embed/I8x6lEoDhrc?&mute=1",
             "image": "https://veritas.widen.net/content/v8jghhql2t/webp/hamstrings.webp?use=idsla&color=&retina=true&u=at8tiu&w=780&h=449&crop=yes&k=c"
         },
         "6": {
@@ -51,7 +51,7 @@
             "name": "Falling Hamstring Curl",
             "motion": "Controlling body's fall by bending/flexing at the knee",
             "muscles": "Hamstrings",
-            "video": "https://youtube.com/embed/iKUbgo-4lTs?feature=share",
+            "video": "https://youtube.com/embed/iKUbgo-4lTs?&mute=1",
             "image": "https://veritas.widen.net/content/v8jghhql2t/webp/hamstrings.webp?use=idsla&color=&retina=true&u=at8tiu&w=780&h=449&crop=yes&k=c"
         },
         "7": {
@@ -60,7 +60,7 @@
             "name": "Leg Extension",
             "motion": "Moving weight by extending at the knee",
             "muscles": "Quadriceps",
-            "video": "https://youtube.com/embed/LTPnuBIheP0",
+            "video": "https://youtube.com/embed/LTPnuBIheP0?&mute=1",
             "image": "https://www.oldschoollabs.com/wp-content/uploads/2020/05/Why-You-Should-Be-Training-Your-Quads.jpg"
         },
         "8": {
@@ -69,7 +69,7 @@
             "name": "Leg Press",
             "motion": "Moving weight by extending at the knee",
             "muscles": "Quadriceps",
-            "video": "https://youtube.com/embed/wIJC7JlDaRQ",
+            "video": "https://youtube.com/embed/wIJC7JlDaRQ?&mute=1",
             "image": "https://www.oldschoollabs.com/wp-content/uploads/2020/05/Why-You-Should-Be-Training-Your-Quads.jpg"
         }
     },
@@ -89,7 +89,7 @@
             "id": "2",
             "question": "What motion best describes this exercise?",
             "media": [
-                "https://www.youtube.com/embed/QaMyxkH1z48?feature=share"
+                "https://www.youtube.com/embed/QaMyxkH1z48?&mute=1"
             ],
             "correct": "1",
             "options": [
@@ -104,7 +104,7 @@
             "id": "3",
             "question": "What muscle does this exercise focus on??",
             "media": [
-                "https://www.youtube.com/embed/QaMyxkH1z48?feature=share"
+                "https://www.youtube.com/embed/QaMyxkH1z48?&mute=1"
             ],
             "correct": "3",
             "options": [
