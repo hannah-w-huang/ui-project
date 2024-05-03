@@ -68,9 +68,10 @@ function display_quiz_q(q, q_count) {
         let parentElement2 = document.getElementById("img-media");
         parentElement2.classList.add("col-4");
         parentElement2.appendChild(div2);
+      } else {
+        $("#img-media").remove();
       }
-    }
-    else {
+    } else {
       let div = document.createElement("div");
       div.className = "center-video";
       let img = document.createElement("img");

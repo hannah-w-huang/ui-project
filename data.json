@@ -119,7 +119,7 @@
             "id": "4",
             "question": "If you want to exercise the highlighted body part below, which exercise should you do?",
             "media": [
-                "https://www.shutterstock.com/image-vector/body-chart-medical-diagram-front-260nw-2278648573.jpg"
+                "https://www.major-lutie.com/cdn/shop/files/Chest_750x.png?v=1699266391"
             ],
             "correct": "3",
             "options": [
@@ -134,14 +134,14 @@
             "id": "5",
             "question": "Which body part does this work?",
             "media": [
-                "https://www.shutterstock.com/image-vector/body-chart-medical-diagram-front-260nw-2278648573.jpg"
+                "https://youtube.com/embed/NGuZZy5WMbE?feature=share"
             ],
             "correct": "2",
             "options": [
-                "A",
-                "B",
-                "C",
-                "D"
+                "Chest",
+                "Shoulders",
+                "Quadriceps",
+                "Hamstrings"
             ],
             "explanation": "This exercise uses the quadriceps due to the extension motion, which is the large muscle located at the front of the upper leg."
         },
@@ -149,7 +149,7 @@
             "id": "6",
             "question": "If you want to exercise the highlighted body part below, which exercise should you do?",
             "media": [
-                "https://www.shutterstock.com/image-vector/body-chart-medical-diagram-front-260nw-2278648573.jpg"
+                "https://cdn.iconscout.com/icon/free/png-256/free-man-hamstrings-9166596-7541805.png"
             ],
             "correct": "1",
             "options": [
