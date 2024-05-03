@@ -43,8 +43,8 @@ function display_quiz_q(q, q_count) {
   quiz_options.append(answer_explanation);
 
   if (q["media"].length > 0) {
-    // $("#video-media").attr("src", q["media"][0]);
-    if (q["media"][0].endsWith("=share")) {
+      // $("#video-media").attr("src", q["media"][0]);
+    if (q["media"][0].indexOf("youtube.com") !== -1) {
       let div = document.createElement("div");
       div.className = "center-video";
       let iframe = document.createElement("iframe");
